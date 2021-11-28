@@ -33,6 +33,54 @@
       </ul>
     </nav>
   </header>
+  <main class="main">
+    <section class="form">
+      <h1 class="form__title">Подбор программы</h1>
+      <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <fieldset class="form__group">
+        <label for="name">Имя:*</label>
+        <input type="text" class="form__data" id="name" name="name" placeholder="Барсик" required><br>
+        <label for="weight">Вес (кг):*</label>
+        <input type="text" class="form__data" id="weight" name="weight" placeholder="7" required><br>
+        <label for="age">Возраст (лет):</label>
+        <input type="text" class="form__data" id="age" name="age" placeholder="7">
+      </fieldset>
+      <fieldset class="form__group">
+        <input type="radio" class="form__goal" id="weight-loss" name="goal" value="weight-loss" checked>
+        <label for="">Похудение</label><br>
+        <input type="radio" class="form__goal" id="weight-set" name="goal" value="weight-set">
+        <label for="">Набор массы</label><br>
+        <input type="radio" class="form__goal" id="advice" name="goal" value="advice">
+        <label for="advice">Не знаю (Нужен ваш совет)</label>
+      </fieldset>
+      <fieldset class="form__group">
+        <legend>Контактные данные (владельца кота)</legend>
+        <label for="email">E-mail:*</label>
+        <input type="email" class="form__contact" name="email" id="email" placeholder="kuklachev@gmail.com"
+          required><br>
+        <label for="email">Телефон:*</label>
+        <input type="tel" class="form__contact" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+      </fieldset>
+      <fieldset class="form__group">
+        <legend>Комментарий</legend>
+        <textarea class="form__add-comment" name="comment" cols="30" rows="10"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="form__group">
+        <legend>Дополнительно</legend>
+        <input type="checkbox" class="form__extra" name="sweetener" id="sweetener" checked>
+        <label for="sweetener">Сахарозаменитель</label><br>
+        <input type="checkbox" class="form__extra" name="water" id="water">
+        <label for="water">Питьевая вода</label><br>
+        <input type="checkbox" class="form__extra" name="milk" id="milk">
+        <label for="milk">Молоко</label><br>
+        <input type="checkbox" class="form__extra" name="vitamins" id="vitamins">
+        <label for="vitamins">Витамины</label>
+      </fieldset>
+      <button type="submit" class="form__send" value="Отправить заявку"></button>
+      <span form__required>* — Обязательные поля</span>
+    </section>
+  </main>
 </body>
 
 </html>
