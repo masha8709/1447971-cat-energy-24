@@ -9,8 +9,12 @@
 .catalog__item {
   background-color: $background-catalog;
   padding: 30px 30px 18px;
+}
+
+.catalog__item:not(:last-child) {
   margin-bottom: 20px;
 }
+
 
 .catalog__title {
   @include fonts(24px, 37px);
@@ -23,6 +27,7 @@
 
 .catalog__text {
   @include fonts(14px, 20px);
+  color: $color-for-text;
   margin-top: 0;
   margin-bottom: 38px;
   width: 195px;

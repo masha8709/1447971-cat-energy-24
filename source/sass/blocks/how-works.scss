@@ -1,0 +1,21 @@
+.how-works {
+  padding: 20px 20px 30px;
+}
+
+.how-works__title {
+  @include fonts(36px, 40px);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.how-works__list {
+  @include reset-list;
+}
+
+.how-works__item {
+  @include fonts(14px, 18px);
+  margin-bottom: 20px;
+  margin-left: 80px;
+  width: 176px;
+}
