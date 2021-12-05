@@ -25,16 +25,3 @@
   margin-top: 0;
   margin-bottom: 30px;
 }
-
-.intro-buy {
-  @include fonts(14px, 18px);
-  color: $main-color;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  width: 280px;
-  background-color: $background-color;
-  text-transform: uppercase;
-  display: block;
-  cursor: pointer;
-}
