@@ -56,6 +56,14 @@
   padding-left: 14px;
 }
 
+.form__data::placeholder,
+.form__contact::placeholder,
+.form__add-comment::placeholder {
+  @include fonts(16px, 18px);
+  color: $color-for-text;
+  text-transform: uppercase;
+}
+
 .form__item-goal {
   margin-bottom: 13px;
 }
@@ -78,6 +86,8 @@
 
 .form__add-comment {
   resize: none;
+  padding-top: 10px;
+  padding-left: 15px;
 }
 
 .form__list-extra {
