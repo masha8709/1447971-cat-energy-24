@@ -1,0 +1,36 @@
+.catalog-extra {
+  padding: 25px 20px;
+}
+
+.catalog-extra__title {
+  @include fonts(24px, 24px);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 49px;
+}
+
+.catalog-extra__list {
+  @include reset-list;
+}
+
+.catalog-extra__heading {
+  @include fonts(16px, 16px);
+  color: $color-heading-for-catalog;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.catalog-extra__table {
+  @include fonts(14px, 14px);
+  margin-bottom: 15px;
+}
+
+.catalog-extra__cell {
+  width: 135px;
+}
+
+.catalog-extra__cell-price {
+  text-align: right;
+}
