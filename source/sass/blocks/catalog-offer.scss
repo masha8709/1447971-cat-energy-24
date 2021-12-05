@@ -1,0 +1,19 @@
+.catalog-offer {
+  padding: 27px 0 25px;
+  margin: 0 20px;
+  width: 280px;
+  min-height: 290px;
+  background-image: url("../../img/catalog/background-cat.jpg");
+  background-repeat: no-repeat;
+}
+
+.catalog-offer__text {
+  @include fonts(16px, 20px);
+  width: 147px;
+  margin-top: 162px;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  color: $main-color;
+  text-align: center;
+}
