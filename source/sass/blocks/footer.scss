@@ -1,0 +1,36 @@
+.footer {
+  padding: 28px 20px 22px;
+}
+
+.footer__contact {
+  margin-bottom: 26px;
+}
+
+.footer__invite {
+  @include fonts(16px, 20px);
+  color: $color-for-footer;
+  text-transform: uppercase;
+  width: 140px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer__address {
+  @include fonts(14px, 20px);
+  color: $color-for-text;
+  font-style: normal;
+  width: 140px;
+}
+
+.footer__logo-wrp {
+  margin-left: 76px;
+}
+
+.footer__social-list {
+  @include reset-list;
+}
+
+.footer__copyright-link {
+  @include fonts(16px, 18px);
+  color: $color-for-text;
+}
