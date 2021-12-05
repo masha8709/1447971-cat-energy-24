@@ -39,28 +39,52 @@
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <fieldset class="form__group">
-        <label for="name">Имя:*</label>
-        <input type="text" class="form__data" id="name" name="name" placeholder="Барсик" required><br>
-        <label for="weight">Вес (кг):*</label>
-        <input type="text" class="form__data" id="weight" name="weight" placeholder="7" required><br>
-        <label for="age">Возраст (лет):</label>
-        <input type="text" class="form__data" id="age" name="age" placeholder="7">
+        <legend class="visually-hidden">Данные о коте</legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <label for="name">Имя:*</label>
+            <input type="text" class="form__data" id="name" name="name" placeholder="Барсик" required>
+          </li>
+          <li class="form__item">
+            <label for="weight">Вес (кг):*</label>
+            <input type="text" class="form__data" id="weight" name="weight" placeholder="7" required>
+          </li>
+          <li class="form__item">
+            <label for="age">Возраст (лет):</label>
+            <input type="text" class="form__data" id="age" name="age" placeholder="7">
+          </li>
+        </ul>
       </fieldset>
       <fieldset class="form__group">
-        <input type="radio" class="form__goal" id="weight-loss" name="goal" value="weight-loss" checked>
-        <label for="weight-loss">Похудение</label><br>
-        <input type="radio" class="form__goal" id="weight-set" name="goal" value="weight-set">
-        <label for="weight-set">Набор массы</label><br>
-        <input type="radio" class="form__goal" id="advice" name="goal" value="advice">
-        <label for="advice">Не знаю (Нужен ваш совет)</label>
+        <legend class="visually-hidden">Выбраит цель диеты</legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <input type="radio" class="form__goal" id="weight-loss" name="goal" value="weight-loss" checked>
+            <label for="weight-loss">Похудение</label>
+          </li>
+          <li class="form__item">
+            <input type="radio" class="form__goal" id="weight-set" name="goal" value="weight-set">
+            <label for="weight-set">Набор массы</label>
+          </li>
+          <li class="form__item">
+            <input type="radio" class="form__goal" id="advice" name="goal" value="advice">
+            <label for="advice">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
       </fieldset>
       <fieldset class="form__group">
         <legend>Контактные данные (владельца кота)</legend>
-        <label for="email">E-mail:*</label>
-        <input type="email" class="form__contact" name="email" id="email" placeholder="kuklachev@gmail.com"
-          required><br>
-        <label for="email">Телефон:*</label>
-        <input type="tel" class="form__contact" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+        <ul class="form__list">
+          <li class="form__item">
+            <label for="email">E-mail:*</label>
+            <input type="email" class="form__contact" name="email" id="email" placeholder="kuklachev@gmail.com"
+              required>
+          </li>
+          <li class="form__item">
+            <label for="email">Телефон:*</label>
+            <input type="tel" class="form__contact" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+          </li>
+        </ul>
       </fieldset>
       <fieldset class="form__group">
         <legend>Комментарий</legend>
@@ -69,14 +93,24 @@
       </fieldset>
       <fieldset class="form__group">
         <legend>Дополнительно</legend>
-        <input type="checkbox" class="form__extra" name="sweetener" id="sweetener" checked>
-        <label for="sweetener">Сахарозаменитель</label><br>
-        <input type="checkbox" class="form__extra" name="water" id="water">
-        <label for="water">Питьевая вода</label><br>
-        <input type="checkbox" class="form__extra" name="milk" id="milk">
-        <label for="milk">Молоко</label><br>
-        <input type="checkbox" class="form__extra" name="vitamins" id="vitamins">
-        <label for="vitamins">Витамины</label>
+        <ul class="form__list">
+          <li class="form__item">
+            <input type="checkbox" class="form__extra" name="sweetener" id="sweetener" checked>
+            <label for="sweetener">Сахарозаменитель</label>
+          </li>
+          <li class="form__item">
+            <input type="checkbox" class="form__extra" name="water" id="water">
+            <label for="water">Питьевая вода</label>
+          </li>
+          <li class="form__item">
+            <input type="checkbox" class="form__extra" name="milk" id="milk">
+            <label for="milk">Молоко</label>
+          </li>
+          <li class="form__item">
+            <input type="checkbox" class="form__extra" name="vitamins" id="vitamins">
+            <label for="vitamins">Витамины</label>
+          </li>
+        </ul>
       </fieldset>
       <button type="submit" class="form__send" value="Отправить заявку"></button>
       <span class="form__required">* — Обязательные поля</span>
@@ -90,9 +124,11 @@
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
     </section>
-    <a href="index.html" class="footer__logo-text logo">
-      <img src="img/svg/logo-txt.svg" alt="Cat Energy">
-    </a>
+    <div class="footer__logo-wrp">
+      <a href="index.html" class="footer__logo-text logo">
+        <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+      </a>
+    </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
@@ -111,7 +147,8 @@
       </li>
     </ul>
     <div class="footer__copyright-list copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">HTML
+        Academy</a>
       <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-logo-link" target="_blank">
         <img src="img/svg/logo-html.svg" alt="Логотип HTML Academy">
       </a>
