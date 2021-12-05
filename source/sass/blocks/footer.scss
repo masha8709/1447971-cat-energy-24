@@ -23,11 +23,13 @@
 }
 
 .footer__logo-wrp {
-  margin-left: 76px;
+  text-align: center;
+  margin-bottom: 52px;
 }
 
 .footer__social-list {
   @include reset-list;
+  margin-bottom: 43px;
 }
 
 .footer__copyright-link {
