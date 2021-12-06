@@ -1,0 +1,40 @@
+.main-catalog {
+  padding: 20px;
+}
+
+.main-catalog__list {
+  @include reset-list;
+}
+
+.main-catalog__item {
+  background-color: $background-catalog;
+  padding: 30px 30px 18px;
+}
+
+.main-catalog__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+.main-catalog__title {
+  @include fonts(24px, 37px);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.main-catalog__text {
+  @include fonts(14px, 20px);
+  color: $color-for-text;
+  margin-top: 0;
+  margin-bottom: 38px;
+  width: 195px;
+}
+
+.main-catalog__choose {
+  @include fonts(16px, 16px);
+  color: $color-for-headings;
+  text-transform: uppercase;
+}

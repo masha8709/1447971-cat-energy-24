@@ -1,0 +1,112 @@
+.form {
+  padding: 27px 20px 32px;
+}
+
+.form__title {
+  @include fonts(36px, 36px);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 37px;
+}
+
+.form__text {
+  @include fonts(14px, 18px);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 39px;
+}
+
+.form__group {
+  border: none;
+  padding: 0;
+}
+
+.form__heading {
+  @include fonts(24px, 26px);
+  font-weight: 400;
+  color: $color-for-headings;
+  margin-bottom: 35px;
+  margin-top: 0;
+}
+
+.form__group-data {
+  padding-bottom: 36px;
+}
+
+.form__group-goal {
+  padding-bottom: 32px;
+}
+
+.form__list {
+  @include reset-list;
+  @include fonts(16px, 18px);
+  text-transform: uppercase;
+  color: $color-for-text;
+}
+
+.form__list-goal {
+  color: $color-heading-for-catalog;
+}
+
+.form__data {
+  margin-left: 13px;
+  margin-bottom: 13px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 14px;
+}
+
+.form__data::placeholder,
+.form__contact::placeholder,
+.form__add-comment::placeholder {
+  @include fonts(16px, 18px);
+  color: $color-for-text;
+  text-transform: uppercase;
+}
+
+.form__item-goal {
+  padding-left: 45px;
+  margin-bottom: 13px;
+}
+
+.form__list-owner {
+  padding-bottom: 10px;
+}
+
+.form__contact {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 16px;
+  margin-left: 13px;
+  margin-bottom: 14px;
+}
+
+.form__group-comment {
+  padding-bottom: 23px;
+}
+
+.form__add-comment {
+  resize: none;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.form__list-extra {
+  color: $color-for-headings;
+  padding-bottom: 14px;
+}
+
+.form__item-extra {
+  padding-left: 45px;
+  margin-bottom: 20px;
+}
+
+.form__send {
+  margin-bottom: 21px;
+}
+
+.form__required {
+  @include fonts(14px, 16px);
+  display: block;
+  text-align: center;
+}

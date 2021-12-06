@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог товаров</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
           <a href="index.html" class="nav__link">главная</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link">каталог продукции</a>
+          <a href="#" class="nav__link">каталог продукции</a>
         </li>
         <li class="nav__item">
           <a href="form.html" class="nav__link">подбор программы</a>
@@ -38,7 +39,7 @@
       <h1 class="catalog__title">Каталог продукции</h1>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <img src="img/catalog/chicken-500.jpg" alt="Пачка Cat Energy PRO 500 грамм со вкусом курицы">
+          <img src="img/catalog/chicken-500.jpg" class="catalog__img-food" alt="Пачка Cat Energy PRO 500 грамм со вкусом курицы">
           <div class="catalog__item-wrp">
             <h3 class="catalog__heading">Cat Energy PRO 500 г</h3>
             <table class="catalog__table">
@@ -56,7 +57,7 @@
               </tr>
             </table>
           </div>
-          <button type="button">Заказать</button>
+          <button class="catalog__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item">
           <img src="img/catalog/chicken-1000.jpg" alt="Пачка Cat Energy PRO 1000 грамм со вкусом курицы">
@@ -77,11 +78,12 @@
               </tr>
             </table>
           </div>
-          <button type="button">Заказать</button>
+          <button class=" catalog__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item">
           <img src="img/catalog/fish-500.jpg" alt="Пачка Cat Energy PRO 500 грамм со вкусом рыбы">
           <div class="catalog__item-wrp">
+            <h3 class="catalog__heading">Cat Energy PRO 500 г</h3>
             <table class="catalog__table">
               <tr class="catalog__line">
                 <td class="catalog__cell">Масса</td>
@@ -97,8 +99,7 @@
               </tr>
             </table>
           </div>
-          <h3 class="catalog__heading">Cat Energy PRO 500 г</h3>
-          <button type="button">Заказать</button>
+          <button class=" catalog__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item">
           <img src="img/catalog/fish-1000.jpg" alt="Пачка Cat Energy PRO 1000 грамм со вкусом рыбы">
@@ -119,7 +120,7 @@
               </tr>
             </table>
           </div>
-          <button type="button">Заказать</button>
+          <button class=" catalog__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item">
           <img src="img/catalog/buckwheat-500.jpg" alt="Пачка Cat Energy PRO 500 грамм, гречка">
@@ -140,7 +141,7 @@
               </tr>
             </table>
           </div>
-          <button type="button">Заказать</button>
+          <button class=" catalog__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item">
           <img src="img/catalog/buckwheat-1000.jpg" alt="Пачка Cat Energy PRO 1000 грамм, гречка">
@@ -161,7 +162,7 @@
               </tr>
             </table>
           </div>
-          <button type="button">Заказать</button>
+          <button class=" catalog__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item">
           <img src="img/catalog/rice-500.jpg" alt="Пачка Cat Energy PRO 500 грамм, рис">
@@ -182,13 +183,13 @@
               </tr>
             </table>
           </div>
-          <button type="button">Заказать</button>
+          <button class=" catalog__button button" type="button">Заказать</button>
         </li>
       </ul>
       <div class="catalog__other-goods">
         <p class="catalog__text-show">Показать еще 100500 товаров</p>
         <p class="catalog__text">На самом деле вкусов гораздо больше!</p>
-        <a href="#" class="catalog__show-all">Показать все</a>
+        <a href="#" class="catalog__show-all button">Показать все</a>
       </div>
     </section>
     <section class="catalog-extra">
@@ -199,40 +200,40 @@
           <table class="catalog-extra__table">
             <tr class="catalog-extra__line">
               <td class="catalog-extra__cell">1 упаковка (100 г)</td>
-              <td class="catalog-extra__cell">200 Р.</td>
+              <td class="catalog-extra__cell catalog-extra__cell-price">200 Р.</td>
             </tr>
           </table>
-          <button type="button">Заказать</button>
+          <button class="catalog-extra__button button" type="button">Заказать</button>
         </li>
         <li class="catalog-extra__item">
           <h3 class="catalog-extra__heading">Питьевая вода</h3>
           <table class="catalog-extra__table">
             <tr class="catalog-extra__line">
               <td class="catalog-extra__cell">5 литров</td>
-              <td class="catalog-extra__cell">50 Р.</td>
+              <td class="catalog-extra__cell catalog-extra__cell-price">50 Р.</td>
             </tr>
           </table>
-          <button type="button">Заказать</button>
+          <button class="catalog-extra__button button" type="button">Заказать</button>
         </li>
         <li class="catalog-extra__item">
           <h3 class="catalog-extra__heading">Молоко</h3>
           <table class="catalog-extra__table">
             <tr class="catalog-extra__line">
               <td class="catalog-extra__cell">1 литр</td>
-              <td class="catalog-extra__cell">100 Р.</td>
+              <td class="catalog-extra__cell catalog-extra__cell-price">100 Р.</td>
             </tr>
           </table>
-          <button type="button">Заказать</button>
+          <button class="catalog-extra__button button" type="button">Заказать</button>
         </li>
         <li class="catalog-extra__item">
           <h3 class="catalog-extra__heading">Витамины</h3>
           <table class="catalog-extra__table">
             <tr class="catalog-extra__line">
               <td class="catalog-extra__cell">1 упаковка (30 г)</td>
-              <td class="catalog-extra__cell">300 Р.</td>
+              <td class="catalog-extra__cell catalog-extra__cell-price">300 Р.</td>
             </tr>
           </table>
-          <button type="button">Заказать</button>
+          <button class="catalog-extra__button button" type="button">Заказать</button>
         </li>
       </ul>
     </section>
@@ -248,9 +249,11 @@
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
     </section>
-    <a class="footer__logo-text logo">
-      <img src="img/svg/logo-txt.svg" alt="Cat Energy">
-    </a>
+    <div class="footer__logo-wrp">
+      <a href="#" class="footer__logo-text logo">
+        <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+      </a>
+    </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
@@ -268,9 +271,9 @@
         </a>
       </li>
     </ul>
-    <div class="footer__copyright__list copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" target="_blank">HTML Academy</a>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link" target="_blank">
+    <div class="footer__copyright-list copyright">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-logo-link" target="_blank">
         <img src="img/svg/logo-html.svg" alt="Логотип HTML Academy">
       </a>
     </div>
