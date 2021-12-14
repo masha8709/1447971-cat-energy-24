@@ -4,10 +4,21 @@
   @media (min-width: $tablet-width) {
     padding: 0 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .main-catalog__list {
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
 }
 
 .main-catalog__item {
@@ -17,10 +28,19 @@
   @media (min-width: $tablet-width) {
     padding: 77px 53px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    padding: 41px 53px 55px;
+  }
 }
 
 .main-catalog__item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -35,6 +55,11 @@
 
   @media (min-width: $tablet-width) {
     @include fonts(36px, 36px);
+    text-align-last: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 125px;
   }
 }
 
@@ -48,6 +73,22 @@
   background-repeat: no-repeat;
   left: 1px;
   top: -10px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/svg/icon-black-cat-tablet.svg");
+    width: 200px;
+    height: 211px;
+    left: auto;
+    right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/svg/icon-cat-black.svg");
+    width: 52px;
+    height: 53px;
+    right: auto;
+    left: -120px;
+  }
 }
 
 .main-catalog__pro .main-catalog__title::before {
@@ -60,6 +101,22 @@
   background-repeat: no-repeat;
   left: -15px;
   top: -10px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/svg/icon-black-panther-tablet.svg");
+    width: 268px;
+    height: 200px;
+    left: auto;
+    right: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/svg/icon-black-panther.svg");
+    width: 67px;
+    height: 53px;
+    right: auto;
+    left: -120px;
+  }
 }
 
 .main-catalog__text {
@@ -78,10 +135,18 @@
     border-bottom: 1px solid $border-catalog-color;
     left: 0;
     bottom: -20px;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet-width) {
     @include fonts(16px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 395px;
   }
 }
 
@@ -100,7 +165,7 @@
     background-image: url("../../img/svg/arrow.svg");
     background-repeat: no-repeat;
     right: -50px;
-    top: 5px;
+    top: 8px;
   }
 
   @media (min-width: $tablet-width) {
