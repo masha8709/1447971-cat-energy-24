@@ -79,6 +79,8 @@
 }
 
 .intro__img {
+  margin: 0;
+
   @media (min-width: $tablet-width) {
     display: block;
     margin: 0 auto;
