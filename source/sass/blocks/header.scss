@@ -1,12 +1,44 @@
 .header {
   padding: 10px 20px 18px;
   background-color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 30px 62px;
+    display: grid;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .header__logo {
   margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 51px;
+  }
 }
 
 .header__logo-img {
   margin-right: 57px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+  }
+}
+
+.header__button-toggle {
+  border: none;
+  background: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
