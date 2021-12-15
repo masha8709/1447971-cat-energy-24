@@ -1,5 +1,13 @@
 .how-works {
   padding: 20px 20px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 71px 110px 27px;
+  }
 }
 
 .how-works__title {
@@ -7,10 +15,28 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(60px, 60px);
+  }
 }
 
 .how-works__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 153px;
+    row-gap: 37px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 94px;
+  }
 }
 
 .how-works__item {
@@ -18,4 +44,98 @@
   margin-bottom: 20px;
   margin-left: 80px;
   width: 176px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    left: -71px;
+    top: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      left: 0;
+      top: -105px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 134px;
+    height: 280px;
+    background-repeat: no-repeat;
+    right: -38px;
+    bottom: -97px;
+    z-index: -1;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fonts(16px, 24px);
+    width: 230px;
+    margin-left: 0;
+    margin-top: 151px;
+  }
+}
+
+.how-works__item:first-child::before {
+  background-image: url("../../img/svg/icon-leaf.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/svg/icon-leaf-tablet.svg");
+  }
+}
+
+.how-works__item:nth-child(2)::before {
+  background-image: url("../../img/svg/icon-powder.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/svg/icon-powder-tablet.svg");
+  }
+}
+
+.how-works__item:nth-child(3)::before {
+  background-image: url("../../img/svg/icon-fork.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/svg/icon-fork-tablet.svg");
+  }
+}
+
+.how-works__item:nth-child(4)::before {
+  background-image: url("../../img/svg/icon-clock.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/svg/icon-clock-tablet.svg");
+  }
+}
+
+.how-works__item:first-child::after {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/main/background-1.png");
+  }
+}
+
+.how-works__item:nth-child(2)::after {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/main/background-2.png");
+  }
+}
+
+.how-works__item:nth-child(3)::after {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/main/background-3.png");
+  }
+}
+
+.how-works__item:nth-child(4)::after {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/main/background-4.png");
+  }
 }
