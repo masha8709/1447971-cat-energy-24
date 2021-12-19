@@ -1,5 +1,18 @@
 .catalog-extra {
   padding: 25px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
+    display: grid;
+    grid-template-rows: 117px 288px;
+    grid-template-columns: 1fr 245px;
+  }
 }
 
 .catalog-extra__title {
@@ -7,10 +20,50 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(36px, 36px);
+    margin-left: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    grid-row: 1/2;
+  }
 }
 
 .catalog-extra__list {
   @include reset-list;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 38px;
+    margin-left: 38px;
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-bottom: 0;
+  }
+}
+
+.catalog-extra__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    width: 896px;
+    margin-bottom: 32px;
+  }
 }
 
 .catalog-extra__heading {
@@ -20,11 +73,24 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(20px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 161px;
+  }
 }
 
 .catalog-extra__table {
   @include fonts(14px, 14px);
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(16px, 20px);
+    width: 224px;
+  }
 }
 
 .catalog-extra__cell {
@@ -33,4 +99,66 @@
 
 .catalog-extra__cell-price {
   text-align: right;
+}
+
+.catalog-extra__button {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    width: 651px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    margin: 0;
+  }
+}
+
+.catalog-extra__offer {
+  min-height: 290px;
+  background-image: url("../../img/catalog/background-cat.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: end;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/catalog/background-cat-tablet.jpg");
+    min-height: 200px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 290px;
+    background-image: url("../../img/catalog/background-cat.jpg");
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+
+.catalog-extra__offer-text {
+  @include fonts(16px, 20px);
+  width: 147px;
+  margin-bottom: 63px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  color: $main-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 148px;
+    margin-right: 124px;
+    margin-left: auto;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+    margin-bottom: 63px;
+    margin-right: auto;
+    text-align: center;
+  }
 }
