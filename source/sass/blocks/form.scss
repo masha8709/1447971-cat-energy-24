@@ -239,12 +239,26 @@
 
 .form__group-comment {
   padding-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 41px;
+    padding-right: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .form__add-comment {
   resize: none;
   padding-top: 10px;
   padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .form__list-extra {
