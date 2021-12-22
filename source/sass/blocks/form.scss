@@ -291,6 +291,10 @@
     width: 565px;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__item-extra {
