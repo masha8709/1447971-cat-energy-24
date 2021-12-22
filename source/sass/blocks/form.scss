@@ -1,5 +1,15 @@
 .form {
   padding: 27px 20px 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
 }
 
 .form__title {
@@ -7,6 +17,16 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(60px, 60px);
+    margin-bottom: 54px;
+    margin-left: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .form__text {
@@ -14,6 +34,17 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(20px, 30px);
+    width: 323px;
+    margin-bottom: 66px;
+    margin-left: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .form__group {
@@ -31,6 +62,10 @@
 
 .form__group-data {
   padding-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 72px;
+  }
 }
 
 .form__group-goal {
@@ -48,12 +83,25 @@
   color: $color-heading-for-catalog;
 }
 
+.form__list-data {
+  @media (min-width: $tablet-width) {
+    margin-right: 37px;
+    margin-left: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .form__data {
   margin-left: 13px;
   margin-bottom: 13px;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 14px;
+  border: 1px solid $border-color-form;
 }
 
 .form__data::placeholder,
@@ -62,6 +110,40 @@
   @include fonts(16px, 18px);
   color: $color-for-text;
   text-transform: uppercase;
+}
+
+.form__item:first-child .form__data {
+  width: 219px;
+
+  @media (min-width: $tablet-width) {
+    width: 570px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 506px;
+  }
+}
+
+.form__item:nth-child(2) .form__data {
+  width: 197px;
+
+  @media (min-width: $tablet-width) {
+    width: 548px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 484px;
+  }
+}
+
+.form__item:nth-child(3) .form__data {
+  @media (min-width: $tablet-width) {
+    width: 515px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 450px;
+  }
 }
 
 .form__item-goal {
