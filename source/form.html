@@ -38,41 +38,43 @@
     <section class="form">
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <fieldset class="form__group form__group-data">
-        <legend class="visually-hidden">Данные о коте</legend>
-        <ul class="form__list form__list-data">
-          <li class="form__item">
-            <label for="name">Имя:*</label>
-            <input type="text" class="form__data" id="name" name="name" placeholder="Барсик" required>
-          </li>
-          <li class="form__item">
-            <label for="weight">Вес (кг):*</label>
-            <input type="text" class="form__data" id="weight" name="weight" placeholder="7" required>
-          </li>
-          <li class="form__item">
-            <label for="age">Возраст (лет):</label>
-            <input type="text" class="form__data" id="age" name="age" placeholder="7">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form__group form__group-goal">
-        <legend class="visually-hidden">Выбрать цель диеты</legend>
-        <ul class="form__list form__list-goal">
-          <li class="form__item form__item-goal">
-            <input type="radio" class="form__goal visually-hidden" id="weight-loss" name="goal" value="weight-loss"
-              checked>
-            <label for="weight-loss">Похудение</label>
-          </li>
-          <li class="form__item form__item-goal">
-            <input type="radio" class="form__goal visually-hidden" id="weight-set" name="goal" value="weight-set">
-            <label for="weight-set">Набор массы</label>
-          </li>
-          <li class="form__item form__item-goal">
-            <input type="radio" class="form__goal visually-hidden" id="advice" name="goal" value="advice">
-            <label for="advice">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="form__data-wrapper">
+        <fieldset class="form__group form__group-data">
+          <legend class="visually-hidden">Данные о коте</legend>
+          <ul class="form__list form__list-data">
+            <li class="form__item">
+              <label for="name">Имя:*</label>
+              <input type="text" class="form__data" id="name" name="name" placeholder="Барсик" required>
+            </li>
+            <li class="form__item">
+              <label for="weight">Вес (кг):*</label>
+              <input type="text" class="form__data" id="weight" name="weight" placeholder="7" required>
+            </li>
+            <li class="form__item">
+              <label for="age">Возраст (лет):</label>
+              <input type="text" class="form__data" id="age" name="age" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__group form__group-goal">
+          <legend class="visually-hidden">Выбрать цель диеты</legend>
+          <ul class="form__list form__list-goal">
+            <li class="form__item form__item-goal">
+              <input type="radio" class="form__goal visually-hidden" id="weight-loss" name="goal" value="weight-loss"
+                checked>
+              <label for="weight-loss">Похудение</label>
+            </li>
+            <li class="form__item form__item-goal">
+              <input type="radio" class="form__goal visually-hidden" id="weight-set" name="goal" value="weight-set">
+              <label for="weight-set">Набор массы</label>
+            </li>
+            <li class="form__item form__item-goal">
+              <input type="radio" class="form__goal visually-hidden" id="advice" name="goal" value="advice">
+              <label for="advice">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="form__group">
         <legend class="form__heading">Контактные данные (владельца кота)</legend>
         <ul class="form__list form__list-owner">

@@ -47,6 +47,13 @@
   }
 }
 
+.form__data-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .form__group {
   border: none;
   padding: 0;
@@ -77,10 +84,22 @@
   @include fonts(16px, 18px);
   text-transform: uppercase;
   color: $color-for-text;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(20px, 30px);
+  }
 }
 
 .form__list-goal {
   color: $color-heading-for-catalog;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+  }
 }
 
 .form__list-data {
@@ -116,7 +135,7 @@
   width: 219px;
 
   @media (min-width: $tablet-width) {
-    width: 570px;
+    width: 560px;
   }
 
   @media (min-width: $desktop-width) {
@@ -128,27 +147,36 @@
   width: 197px;
 
   @media (min-width: $tablet-width) {
-    width: 548px;
+    width: 533px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 484px;
+    width: 480px;
   }
 }
 
 .form__item:nth-child(3) .form__data {
   @media (min-width: $tablet-width) {
-    width: 515px;
+    width: 492px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 450px;
+    width: 440px;
   }
 }
 
 .form__item-goal {
   padding-left: 45px;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 87px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .form__list-owner {
