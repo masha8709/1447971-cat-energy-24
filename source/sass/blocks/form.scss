@@ -65,6 +65,10 @@
   color: $color-for-headings;
   margin-bottom: 35px;
   margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    @include fonts(36px, 36px);
+  }
 }
 
 .form__group-data {
@@ -179,8 +183,26 @@
   }
 }
 
+.form__group-contacts {
+  @media (min-width: $tablet-width) {
+    padding-left: 41px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .form__list-owner {
   padding-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 77px;
+  }
 }
 
 .form__contact {
@@ -189,6 +211,30 @@
   padding-left: 16px;
   margin-left: 13px;
   margin-bottom: 14px;
+}
+
+.form__item:first-child .form__contact {
+  width: 209px;
+
+  @media (min-width: $tablet-width) {
+    width: 548px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 486px;
+  }
+}
+
+.form__item:nth-child(2) .form__contact {
+  width: 192px;
+
+  @media (min-width: $tablet-width) {
+    width: 527px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 472px;
+  }
 }
 
 .form__group-comment {
