@@ -1,9 +1,9 @@
 .header {
-  padding: 10px 20px 18px;
+  padding: 10px 20px 0;
   background-color: $main-color;
 
   @media (min-width: $tablet-width) {
-    padding: 24px 30px 62px;
+    padding: 42px 30px 35px;
     display: grid;
   }
 
@@ -15,7 +15,7 @@
 }
 
 .header__logo {
-  margin-bottom: 46px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     grid-row: 1/2;
@@ -31,14 +31,5 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 15px;
-  }
-}
-
-.header__button-toggle {
-  border: none;
-  background: none;
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }

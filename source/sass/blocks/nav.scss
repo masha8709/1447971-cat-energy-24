@@ -1,10 +1,91 @@
 .nav {
   padding-left: 49px;
   padding-right: 49px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     grid-row: 1/2;
     padding: 0;
+  }
+}
+
+.nav__button-toggle {
+  border: none;
+  background: none;
+  position: absolute;
+  top: -65px;
+  right: 0;
+  display: block;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav--closed .nav__button-toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background-color: $color-for-headings;
+  box-shadow: 0 8px 0 0 $color-for-headings, 0 16px 0 0 $color-for-headings;
+}
+
+.nav--opened .nav__button-toggle {
+  top: -65px;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    width: 26px;
+    height: 2px;
+    background-color: $color-for-headings;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.nav--nojs .nav__button-toggle {
+  display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__item {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__list {
+    padding: 0;
+  }
+}
+
+.nav--opened {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 31vh;
+    background-color: $main-color;
   }
 }
 
@@ -14,6 +95,11 @@
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
+
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 23px;
+  }
 
   @media (min-width: $tablet-width) {
     @include fonts(18px, 24px);
@@ -33,10 +119,27 @@
   margin-bottom: 46px;
   position: relative;
 
+  &:hover {
+    color: $color-hover;
+  }
+
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+}
+
+.nav__item .nav__link:hover {
+  color: $color-hover;
+}
+
+.nav__item .nav__link:focus {
+  color: $color-focus;
+}
+
+.nav__item .nav__link:active {
+  color: $color-for-headings;
+  border-bottom: 2px solid $background-color;
 }
 
 .nav__item:first-child::before {
@@ -45,7 +148,7 @@
   display: block;
   width: 320px;
   border-bottom: 1px solid $border-color;
-  left: -70px;
+  left: -49px;
   top: -24px;
 
   @media (min-width: $tablet-width) {
@@ -54,7 +157,7 @@
 }
 
 
-.nav__item:not(:last-child)::after {
+.nav__item::after {
   content: "";
   position: absolute;
   display: block;
