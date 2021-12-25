@@ -156,16 +156,24 @@
   text-transform: uppercase;
   position: relative;
 
+  &:focus {
+    color: $color-menu-hover;
+  }
+
   &::after {
     content: "";
     position: absolute;
     display: block;
     width: 32px;
-    height: 10px;
+    height: 44px;
     background-image: url("../../img/svg/arrow.svg");
     background-repeat: no-repeat;
     right: -50px;
     top: 8px;
+  }
+
+  &::after:hover {
+    width: 50px;
   }
 
   @media (min-width: $tablet-width) {

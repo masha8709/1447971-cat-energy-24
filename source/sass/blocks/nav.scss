@@ -120,7 +120,7 @@
   position: relative;
 
   &:hover {
-    color: $color-hover;
+    color: $color-menu-hover;
   }
 
 
@@ -130,11 +130,11 @@
 }
 
 .nav__item .nav__link:hover {
-  color: $color-hover;
+  color: $color-menu-hover;
 }
 
 .nav__item .nav__link:focus {
-  color: $color-focus;
+  color: $color-menu-focus;
 }
 
 .nav__item .nav__link:active {
@@ -163,7 +163,7 @@
   display: block;
   width: 320px;
   border-bottom: 1px solid #e6e6e6;
-  left: -70px;
+  left: -49px;
   bottom: -24px;
 
   @media (min-width: $tablet-width) {
