@@ -103,6 +103,14 @@
     padding-bottom: 14px;
   }
 
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    color: $button-focus;
+  }
+
   @media (min-width: $desktop-width) {
     margin-left: 80px;
   }
