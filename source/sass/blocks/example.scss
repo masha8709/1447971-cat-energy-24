@@ -163,6 +163,10 @@
 }
 
 .example__range {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+
   @media (min-width: $tablet-width) {
     grid-row: 5/6;
     grid-column: 1/4;
@@ -172,9 +176,58 @@
   @media (min-width: $desktop-width) {
     grid-column: 3/5;
     grid-row: 4/5;
-    margin-top: 24px;
   }
 }
+
+.example__range-controls {
+  width: 86px;
+  height: 14px;
+  background-color: $main-color;
+  border-radius: 6px;
+  margin-left: 13px;
+  margin-right: 13px;
+  border: 1px solid $border-example-color;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: $border-example-color;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 36px;
+    top: 3px;
+    left: 13px;
+    background: $background-color;
+    border-radius: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: -15px;
+      left: 50%;
+      width: 34px;
+      height: 34px;
+      border: 12px solid $main-color;
+      background-color: $background-color;
+      border-radius: 50%;
+      box-shadow: 0 2px 1px 0 #cdcdcd;
+    }
+  }
+}
+
+//.example__scale {
+// height: 6px;
+//  background: $background-color;
+// width: 36px;
+// border-radius: 6px;
+// margin-left: 15px;
+//}
 
 .example__button {
   @include fonts(16px, 20px);

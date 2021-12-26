@@ -98,7 +98,8 @@
         alt="После диеты кот худенький">
       <div class="example__range">
         <button type="button" class="example__button example__button-past">Было</button>
-        <input type="range" name="result" min="1" max="15" step="1">
+        <div class="example__range-controls">
+        </div>
         <button type="button" class="example__button example__button-present">Стало</button>
       </div>
     </section>
@@ -110,36 +111,40 @@
     </div>
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5869045009945!2d30.327667419185975!3d59.93899660569495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310edbef855b%3A0xee3abe449bc142d7!2z0JzQuNGF0LDQudC70L7QstGB0LrQuNC5INGC0LXQsNGC0YA!5e0!3m2!1sru!2sru!4v1640444352006!5m2!1sru!2sru"
+        width="300" height="362" style="border: 0;" allowfullscreen="" loading="lazy" title="Офис компании Кэт Энерджи">
+      </iframe>
     </section>
-      <div class="footer__logo-wrp">
-        <a href="#" class="footer__logo-text logo">
-          <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+    <div class="footer__logo-wrp">
+      <a href="#" class="footer__logo-text logo">
+        <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+      </a>
+    </div>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a href="#" target="_blank" class="footer__social-link">
+          <img src="img/svg/icon-vkontakte.svg" alt="Иконка вконтакте">
         </a>
-      </div>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a href="#" target="_blank" class="footer__social-link">
-            <img src="img/svg/icon-vkontakte.svg" alt="Иконка вконтакте">
-          </a>
-        </li>
-        <li class="footer__social-item">
-          <a href="#" target="_blank" class="footer__social-link">
-            <img src="img/svg/icon-instagram.svg" alt="Иконка инстаграма">
-          </a>
-        </li>
-        <li class="footer__social-item">
-          <a href="#" target="_blank" class="footer__social-link">
-            <img src="img/svg/icon-facebook.svg" alt="Иконка фейсбука">
-          </a>
-        </li>
-      </ul>
-      <div class="footer__copyright-list copyright">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">HTML
-          Academy</a>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-logo-link" target="_blank">
-          <img src="img/svg/logo-html.svg" alt="Логотип HTML Academy">
+      </li>
+      <li class="footer__social-item">
+        <a href="#" target="_blank" class="footer__social-link">
+          <img src="img/svg/icon-instagram.svg" alt="Иконка инстаграма">
         </a>
-      </div>
+      </li>
+      <li class="footer__social-item">
+        <a href="#" target="_blank" class="footer__social-link">
+          <img src="img/svg/icon-facebook.svg" alt="Иконка фейсбука">
+        </a>
+      </li>
+    </ul>
+    <div class="footer__copyright-list copyright">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">HTML
+        Academy</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-logo-link" target="_blank">
+        <img src="img/svg/logo-html.svg" alt="Логотип HTML Academy">
+      </a>
+    </div>
   </footer>
 
   <script>
@@ -148,7 +153,7 @@
 
     nav.classList.remove('nav--nojs');
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function () {
       if (nav.classList.contains('nav--closed')) {
         nav.classList.remove('nav--closed');
         nav.classList.add('nav--opened');
@@ -157,6 +162,7 @@
         nav.classList.remove('nav--opened');
       }
     });
+
   </script>
 </body>
 
