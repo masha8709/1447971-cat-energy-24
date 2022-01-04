@@ -142,6 +142,13 @@
   border-bottom: 2px solid $background-color;
 }
 
+.nav__item--active {
+  @media (min-width: $tablet-width) {
+    color: $color-for-headings;
+    border-bottom: 2px solid $background-color;
+  }
+}
+
 .nav__item:first-child::before {
   content: "";
   position: absolute;
