@@ -101,6 +101,10 @@
   @media (min-width: $desktop-width) {
     padding-left: 39px;
     padding-right: 39px;
+
+    &::before {
+      width: 245px;
+    }
   }
 }
 
