@@ -118,6 +118,11 @@
   }
 }
 
+.form__item {
+  display: flex;
+  align-items: baseline;
+}
+
 .form__data {
   margin-left: 13px;
   margin-bottom: 13px;
@@ -125,6 +130,7 @@
   padding-bottom: 13px;
   padding-left: 14px;
   border: 1px solid $border-color-form;
+  width: 100%;
 }
 
 .form__data::placeholder,
@@ -135,39 +141,6 @@
   text-transform: uppercase;
 }
 
-.form__item:first-child .form__data {
-  width: 219px;
-
-  @media (min-width: $tablet-width) {
-    width: 560px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 506px;
-  }
-}
-
-.form__item:nth-child(2) .form__data {
-  width: 197px;
-
-  @media (min-width: $tablet-width) {
-    width: 533px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 480px;
-  }
-}
-
-.form__item:nth-child(3) .form__data {
-  @media (min-width: $tablet-width) {
-    width: 492px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 440px;
-  }
-}
 
 .form__item-goal {
   padding-left: 45px;
