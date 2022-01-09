@@ -99,10 +99,26 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 41px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 1px solid $border-color-form;
+      width: 630px;
+      height: 196px;
+      top: -17px;
+      left: 35px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 30px;
+
+    &::before {
+      top: 0;
+    }
   }
 }
 
@@ -131,6 +147,10 @@
   padding-left: 14px;
   border: 1px solid $border-color-form;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__data::placeholder,
@@ -141,18 +161,66 @@
   text-transform: uppercase;
 }
 
+.form__item-data:nth-child(2) label {
+  width: 88px;
+}
+
+.form__item-data:nth-child(3) label {
+  width: 158px;
+}
 
 .form__item-goal {
   padding-left: 45px;
-  margin-bottom: 13px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     padding-left: 87px;
-    margin-bottom: 18px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 13px;
+    margin-bottom: 30px;
+  }
+}
+
+.form__item-goal label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form__goal + label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-example-color;
+  border-radius: 50%;
+  top: -6px;
+  left: -46px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -64px;
+  }
+}
+
+.form__goal:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #68b738;
+  border-radius: 50%;
+  top: 2px;
+  left: -38px;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: -53px;
   }
 }
 

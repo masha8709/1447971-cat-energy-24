@@ -39,22 +39,22 @@
     </nav>
   </header>
   <main class="main">
-    <section class="form">
+    <form class="form">
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <div class="form__data-wrapper">
         <fieldset class="form__group form__group-data">
           <legend class="visually-hidden">Данные о коте</legend>
           <ul class="form__list form__list-data">
-            <li class="form__item">
+            <li class="form__item form__item-data">
               <label for="name">Имя:*</label>
               <input type="text" class="form__data" id="name" name="name" placeholder="Барсик" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item-data">
               <label for="weight">Вес (кг):*</label>
               <input type="text" class="form__data" id="weight" name="weight" placeholder="7" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item-data">
               <label for="age">Возраст (лет):</label>
               <input type="text" class="form__data" id="age" name="age" placeholder="7">
             </li>
@@ -123,7 +123,7 @@
         <button type="submit" class="form__send button" value="Отправить заявку">Отправить заявку</button>
         <span class="form__required">* — Обязательные поля</span>
       </div>
-    </section>
+    </form>
   </main>
   <footer class="footer container">
     <div class="footer__contact">
