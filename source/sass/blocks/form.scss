@@ -65,9 +65,97 @@
   color: $color-for-headings;
   margin-bottom: 35px;
   margin-top: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid $background-color;
+    top: 14px;
+  }
 
   @media (min-width: $tablet-width) {
     @include fonts(36px, 36px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      border-bottom: 2px solid $background-color;
+      top: 22px;
+    }
+
+    &::after {
+      top: 22px;
+    }
+  }
+}
+
+.form__heading-contacts {
+  &::after {
+    width: 99px;
+    right: -22px;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+
+    &::before {
+      width: 30px;
+      left: -73px;
+    }
+
+    &::after {
+      width: 145px;
+      right: -184px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 70px;
+      left: -112px;
+    }
+
+    &::after {
+      width: 778px;
+      right: -815px;
+    }
+  }
+}
+
+.form__heading-comment {
+  &::after {
+    width: 158px;
+    right: -178px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+
+    &::before {
+      width: 30px;
+      left: -73px;
+    }
+
+    &::after {
+      width: 478px;
+      right: -515px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 70px;
+      left: -112px;
+    }
+
+    &::after {
+      width: 1108px;
+      right: -1146px;
+    }
   }
 }
 
@@ -81,6 +169,36 @@
 
 .form__group-goal {
   padding-bottom: 32px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    min-height: 158px;
+    border-top: 1px solid $border-catalog-color;
+    top: -23px;
+    left: -23px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    min-height: 158px;
+    border-top: 1px solid $border-catalog-color;
+    bottom: -123px;
+    left: -23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .form__list {
@@ -239,6 +357,10 @@
 .form__list-owner {
   padding-bottom: 10px;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -318,8 +440,35 @@
 }
 
 .form__heading-extra {
+  &::after {
+    width: 136px;
+    right: -157px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
+
+    &::before {
+      width: 30px;
+      left: -73px;
+    }
+
+    &::after {
+      width: 446px;
+      right: -484px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 70px;
+      left: -112px;
+    }
+
+    &::after {
+      width: 1078px;
+      right: -1116px;
+    }
   }
 }
 
