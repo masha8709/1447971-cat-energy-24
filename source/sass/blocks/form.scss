@@ -308,7 +308,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 41px;
     padding-right: 37px;
-    padding-bottom: 54px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -344,6 +344,45 @@
 
   @media (min-width: $tablet-width) {
     width: 221px;
+    margin-bottom: 32px;
+  }
+}
+
+.form__item-extra label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form__extra + label::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 1px solid $border-example-color;
+  top: -3px;
+  left: -46px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__extra:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 13px;
+  background-image: url("../../img/svg/tick-mobile.svg");
+  top: 4px;
+  left: -42px;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/svg/tick-tablet.svg");
+    left: -39px;
   }
 }
 
