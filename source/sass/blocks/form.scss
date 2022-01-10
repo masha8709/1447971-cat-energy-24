@@ -65,9 +65,97 @@
   color: $color-for-headings;
   margin-bottom: 35px;
   margin-top: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid $background-color;
+    top: 14px;
+  }
 
   @media (min-width: $tablet-width) {
     @include fonts(36px, 36px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      border-bottom: 2px solid $background-color;
+      top: 22px;
+    }
+
+    &::after {
+      top: 22px;
+    }
+  }
+}
+
+.form__heading-contacts {
+  &::after {
+    width: 99px;
+    right: -22px;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+
+    &::before {
+      width: 30px;
+      left: -73px;
+    }
+
+    &::after {
+      width: 145px;
+      right: -184px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 70px;
+      left: -112px;
+    }
+
+    &::after {
+      width: 778px;
+      right: -815px;
+    }
+  }
+}
+
+.form__heading-comment {
+  &::after {
+    width: 158px;
+    right: -178px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+
+    &::before {
+      width: 30px;
+      left: -73px;
+    }
+
+    &::after {
+      width: 478px;
+      right: -515px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 70px;
+      left: -112px;
+    }
+
+    &::after {
+      width: 1108px;
+      right: -1146px;
+    }
   }
 }
 
@@ -81,6 +169,36 @@
 
 .form__group-goal {
   padding-bottom: 32px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    min-height: 158px;
+    border-top: 1px solid $border-catalog-color;
+    top: -23px;
+    left: -23px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    min-height: 158px;
+    border-top: 1px solid $border-catalog-color;
+    bottom: -123px;
+    left: -23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .form__list {
@@ -99,10 +217,26 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 41px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 1px solid $border-color-form;
+      width: 630px;
+      height: 196px;
+      top: -17px;
+      left: 35px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 30px;
+
+    &::before {
+      top: 0;
+    }
   }
 }
 
@@ -118,6 +252,11 @@
   }
 }
 
+.form__item {
+  display: flex;
+  align-items: baseline;
+}
+
 .form__data {
   margin-left: 13px;
   margin-bottom: 13px;
@@ -125,6 +264,11 @@
   padding-bottom: 13px;
   padding-left: 14px;
   border: 1px solid $border-color-form;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__data::placeholder,
@@ -135,51 +279,66 @@
   text-transform: uppercase;
 }
 
-.form__item:first-child .form__data {
-  width: 219px;
-
-  @media (min-width: $tablet-width) {
-    width: 560px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 506px;
-  }
+.form__item-data:nth-child(2) label {
+  width: 88px;
 }
 
-.form__item:nth-child(2) .form__data {
-  width: 197px;
-
-  @media (min-width: $tablet-width) {
-    width: 533px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 480px;
-  }
-}
-
-.form__item:nth-child(3) .form__data {
-  @media (min-width: $tablet-width) {
-    width: 492px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 440px;
-  }
+.form__item-data:nth-child(3) label {
+  width: 158px;
 }
 
 .form__item-goal {
   padding-left: 45px;
-  margin-bottom: 13px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     padding-left: 87px;
-    margin-bottom: 18px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 13px;
+    margin-bottom: 30px;
+  }
+}
+
+.form__item-goal label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form__goal + label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-example-color;
+  border-radius: 50%;
+  top: -6px;
+  left: -46px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -64px;
+  }
+}
+
+.form__goal:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #68b738;
+  border-radius: 50%;
+  top: 2px;
+  left: -38px;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: -53px;
   }
 }
 
@@ -197,6 +356,10 @@
 
 .form__list-owner {
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -267,7 +430,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 41px;
     padding-right: 37px;
-    padding-bottom: 54px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -277,8 +440,35 @@
 }
 
 .form__heading-extra {
+  &::after {
+    width: 136px;
+    right: -157px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
+
+    &::before {
+      width: 30px;
+      left: -73px;
+    }
+
+    &::after {
+      width: 446px;
+      right: -484px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 70px;
+      left: -112px;
+    }
+
+    &::after {
+      width: 1078px;
+      right: -1116px;
+    }
   }
 }
 
@@ -303,6 +493,45 @@
 
   @media (min-width: $tablet-width) {
     width: 221px;
+    margin-bottom: 32px;
+  }
+}
+
+.form__item-extra label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form__extra + label::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 1px solid $border-example-color;
+  top: -3px;
+  left: -46px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__extra:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 13px;
+  background-image: url("../../img/svg/tick-mobile.svg");
+  top: 4px;
+  left: -42px;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/svg/tick-tablet.svg");
+    left: -39px;
   }
 }
 

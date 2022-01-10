@@ -20,26 +20,77 @@
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 49px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 53px;
+    right: -20px;
+    bottom: 8px;
+    border-bottom: 2px solid $background-color;
+  }
 
   @media (min-width: $tablet-width) {
     @include fonts(36px, 36px);
     margin-left: 38px;
+    margin-bottom: 105px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      left: -68px;
+      bottom: 8px;
+      border-bottom: 2px solid $background-color;
+    }
+
+    &::after {
+      width: 328px;
+      right: -30px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
     grid-row: 1/2;
+
+    &::before {
+      width: 70px;
+      bottom: -12px;
+      left: -110px;
+    }
+
+    &::after {
+      width: 957px;
+      right: -355px;
+      bottom: -12px;
+    }
   }
 }
 
 .catalog-extra__list {
   @include reset-list;
-  margin-bottom: 33px;
+  margin-bottom: 53px;
 
   @media (min-width: $tablet-width) {
     margin-right: 38px;
     margin-left: 38px;
     margin-bottom: 69px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 708px;
+      height: 556px;
+      left: -38px;
+      bottom: 0;
+      border: 1px solid $border-example-color;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -49,20 +100,87 @@
     grid-row: 2/3;
     grid-column: 1/2;
     margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .catalog-extra__item {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -19px;
+    border-bottom: 1px solid $border-example-color;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &::after {
+      bottom: 19px;
+      width: 708px;
+      left: -38px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     align-items: center;
     width: 896px;
     margin-bottom: 32px;
+
+    &::after {
+      width: 896px;
+      left: 0;
+      bottom: -16px;
+    }
+  }
+}
+
+.catalog-extra__item:first-child {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -13px;
+    border-bottom: 1px solid $border-example-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: block;
+      width: 896px;
+    }
+  }
+}
+
+.catalog-extra__item:last-child {
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      display: block;
+    }
   }
 }
 
@@ -102,12 +220,13 @@
 }
 
 .catalog-extra__button {
-  margin-bottom: 19px;
+  margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
     width: 651px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $desktop-width) {
@@ -121,16 +240,37 @@
   background-image: url("../../img/catalog/background-cat.jpg");
   background-repeat: no-repeat;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../../img/svg/icon-gift-mobile.svg");
+    width: 78px;
+    height: 80px;
+    top: 42px;
+    left: 96px;
+  }
 
   @media (min-width: $tablet-width) {
     background-image: url("../../img/catalog/background-cat-tablet.jpg");
     min-height: 200px;
     align-items: center;
+
+    &::before {
+      background-image: url("../../img/svg/icon-gift-tablet.svg");
+      width: 80px;
+      height: 82px;
+      top: 54px;
+      left: 85px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 290px;
+    align-items: flex-end;
     background-image: url("../../img/catalog/background-cat.jpg");
     grid-row: 2/3;
     grid-column: 2/3;

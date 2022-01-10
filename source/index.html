@@ -23,7 +23,7 @@
       </a>
     </div>
 
-    <nav class="nav nav--opened nav--nojs">
+    <nav class="nav nav--closed nav--nojs">
       <button class="nav__button-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="nav__list">
         <li class="nav__item nav__item--active">
@@ -151,23 +151,9 @@
     </div>
   </footer>
 
-  <script>
-    let nav = document.querySelector('.nav');
-    let navToggle = document.querySelector('.nav__button-toggle');
+  <script src="./js/menu-toggle.js"></script>
 
-    nav.classList.remove('nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (nav.classList.contains('nav--closed')) {
-        nav.classList.remove('nav--closed');
-        nav.classList.add('nav--opened');
-      } else {
-        nav.classList.add('nav--closed');
-        nav.classList.remove('nav--opened');
-      }
-    });
-
-  </script>
+  <script></script>
 </body>
 
 </html>
