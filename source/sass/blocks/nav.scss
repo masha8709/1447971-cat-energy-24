@@ -147,6 +147,10 @@
     color: $color-for-headings;
     border-bottom: 2px solid $background-color;
   }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $main-color;
+  }
 }
 
 .nav__item:first-child::before {
@@ -194,4 +198,8 @@
 
 .nav__link {
   color: $color-for-headings;
+
+  @media (min-width: $desktop-width) {
+    color: $main-color;
+  }
 }
