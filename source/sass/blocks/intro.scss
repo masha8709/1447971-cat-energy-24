@@ -20,6 +20,15 @@
     padding-left: 110px;
     padding-bottom: 82px;
     padding-top: 0;
+    background-image: url("../../img/main/background-cat-desktop.jpg");
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-size: 720px auto;
+      background-image: url("../../img/main/background-cat-desctop@2x.jpg");
+    }
   }
 }
 
@@ -90,7 +99,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: -170px;
+    margin-top: -142px;
+    margin-right: 153px;
   }
 }
 
