@@ -17,10 +17,11 @@
   <header class="header container">
     <div class="header__logo">
       <a href="index.html" class="header__logo-img">
-        <img src="img/svg/logo-mobile.svg" alt="Логотип компании Cat Energy">
-      </a>
-      <a href="index.html" class="header__logo-text logo">
-        <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./img/svg/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/svg/logo-tablet.svg">
+          <img src="img/svg/logo-mobile1.svg" width="191" height="38" alt="Логотип компании Cat Energy">
+        </picture>
       </a>
     </div>
     <nav class="nav nav--closed nav--nojs">
