@@ -28,7 +28,7 @@
 .nav--closed .nav__button-toggle::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 15px;
   left: 0;
   width: 26px;
   height: 2px;
@@ -149,6 +149,12 @@
   }
 }
 
+.nav__item-index--active {
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $main-color;
+  }
+}
+
 .nav__item:first-child::before {
   content: "";
   position: absolute;
@@ -194,4 +200,10 @@
 
 .nav__link {
   color: $color-for-headings;
+}
+
+.nav__link-only-index {
+  @media (min-width: $desktop-width) {
+    color: $main-color;
+  }
 }

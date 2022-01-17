@@ -19,6 +19,16 @@
     position: relative;
     padding-left: 110px;
     padding-bottom: 82px;
+    padding-top: 0;
+    background-image: url("../../img/main/background-cat-desktop.jpg");
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-size: 720px auto;
+      background-image: url("../../img/main/background-cat-desctop@2x.jpg");
+    }
   }
 }
 
@@ -55,6 +65,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 80px;
+    margin-top: 225px;
   }
 }
 
@@ -85,10 +96,12 @@
     display: block;
     margin: 0 auto;
     order: 4;
+    margin-top: -40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: -100px;
+    margin-top: -142px;
+    margin-right: 153px;
   }
 }
 
@@ -101,6 +114,8 @@
     height: 55px;
     padding-top: 14px;
     padding-bottom: 14px;
+    z-index: 10;
+    margin-top: 29px;
   }
 
   &:hover {
