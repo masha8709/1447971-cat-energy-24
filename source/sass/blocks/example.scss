@@ -53,6 +53,7 @@
 
 .example__text {
   @include fonts(14px, 18px);
+  font-family: $font;
   color: $color-for-text;
   margin-top: 0;
   margin-bottom: 20px;
@@ -143,6 +144,7 @@
   color: $color-for-text;
   margin: 0;
   margin-left: 26px;
+  font-family: $font;
 
   @media (min-width: $tablet-width) {
     @include fonts(14px, 14px);

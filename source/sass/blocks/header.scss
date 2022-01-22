@@ -37,8 +37,21 @@
 
 .header__logo-img {
   margin-right: 57px;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     margin-right: 15px;
   }
+}
+
+.header__logo-img:hover {
+  opacity: 0.8;
+}
+
+.header__logo-img:focus {
+  opacity: 0.6;
+}
+
+.header__logo-img:active {
+  opacity: 0.6;
 }

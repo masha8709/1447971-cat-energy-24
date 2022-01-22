@@ -64,6 +64,7 @@
 
 .footer__address {
   @include fonts(14px, 20px);
+  font-family: $font;
   color: $color-for-text;
   font-style: normal;
   width: 136px;
@@ -196,6 +197,7 @@
 
 .footer__copyright-link {
   @include fonts(16px, 18px);
+  font-family: $font;
   color: $color-for-text;
   margin-top: 5px;
 

@@ -560,6 +560,7 @@
 
 .form__required {
   @include fonts(14px, 16px);
+  font-family: $font;
   display: block;
   text-align: center;
 }

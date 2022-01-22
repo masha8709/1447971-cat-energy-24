@@ -41,6 +41,7 @@
 
 .how-works__item {
   @include fonts(14px, 18px);
+  font-family: $font;
   margin-bottom: 20px;
   margin-left: 80px;
   width: 176px;

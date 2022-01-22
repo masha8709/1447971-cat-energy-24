@@ -203,6 +203,7 @@
 
 .catalog-extra__table {
   @include fonts(14px, 14px);
+  font-family: $font;
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
@@ -279,6 +280,7 @@
 
 .catalog-extra__offer-text {
   @include fonts(16px, 20px);
+  font-family: $font;
   width: 147px;
   margin-bottom: 63px;
   margin-top: 0;

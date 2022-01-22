@@ -106,6 +106,8 @@
 }
 
 .intro-buy {
+  outline: none;
+
   @media (min-width: $tablet-width) {
     @include fonts(20px, 20px);
     margin-left: 87px;
