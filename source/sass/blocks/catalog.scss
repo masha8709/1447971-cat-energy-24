@@ -198,16 +198,16 @@
   margin-bottom: 33px;
   outline: none;
 
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    color: $button-focus;
+  }
+
   @media (min-width: $tablet-width) {
     width: 248px;
-
-    &:hover {
-      background-color: $button-hover;
-    }
-
-    &:focus {
-      color: $button-focus;
-    }
   }
 
   @media (min-width: $desktop-width) {

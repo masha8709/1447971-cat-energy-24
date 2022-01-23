@@ -432,6 +432,45 @@
   }
 }
 
+.form__contact-button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+}
+
+.form__contact-icon {
+  fill: $main-color;
+  position: relative;
+  right: 16px;
+  top: 13px;
+
+  @media (min-width: $tablet-width) {
+    right: 72px;
+    top: 12px;
+  }
+}
+
+.form__contact-email {
+  &:hover {
+    fill: $background-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 733px;
+  }
+}
+
+.form__contact-phone {
+  &:hover {
+    stroke: $background-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 115px;
+  }
+}
+
 .form__item-contact:first-child label {
   width: 70px;
 
@@ -439,30 +478,6 @@
     width: 78px;
   }
 }
-
-// .form__item:first-child .form__contact {
-//   width: 209px;
-
-//   @media (min-width: $tablet-width) {
-//     width: 548px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     width: 486px;
-//   }
-// }
-
-// .form__item:nth-child(2) .form__contact {
-//   width: 192px;
-
-//   @media (min-width: $tablet-width) {
-//     width: 527px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     width: 472px;
-//   }
-// }
 
 .form__group-comment {
   padding-bottom: 23px;
@@ -636,6 +651,14 @@
 
 .form__send {
   margin-bottom: 21px;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    color: $button-focus;
+  }
 
   @media (min-width: $desktop-width) {
     width: 568px;
