@@ -110,6 +110,7 @@
 
   @media (min-width: $tablet-width) {
     @include fonts(20px, 20px);
+    cursor: pointer;
     margin-left: 87px;
     order: 3;
     width: 245px;

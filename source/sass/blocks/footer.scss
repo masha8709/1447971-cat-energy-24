@@ -115,6 +115,18 @@
   }
 }
 
+.footer__logo-text:hover {
+  opacity: 0.8;
+}
+
+.footer__logo-text:focus {
+  opacity: 0.8;
+}
+
+.footer__logo-text:active {
+  opacity: 0.6;
+}
+
 .footer__social-list {
   @include reset-list;
   margin-top: 20px;

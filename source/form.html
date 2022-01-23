@@ -65,7 +65,7 @@
           <legend class="visually-hidden">Выбрать цель диеты</legend>
           <ul class="form__list form__list-goal">
             <li class="form__item form__item-goal">
-              <input type="radio" class="form__goal visually-hidden" id="weight-loss" name="goal" value="weight-loss"
+              <input type="radio" class="form__goal visually-hidden" id="weight-loss" name="goal" value="weight-loss" tabindex="0"
                 checked>
               <label for="weight-loss">Похудение</label>
             </li>
@@ -83,12 +83,12 @@
       <fieldset class="form__group form__group-contacts">
         <legend class="form__heading form__heading-contacts">Контактные данные (владельца кота)</legend>
         <ul class="form__list form__list-owner">
-          <li class="form__item">
+          <li class="form__item form__item-contact">
             <label for="email">E-mail:*</label>
             <input type="email" class="form__contact" name="email" id="email" placeholder="kuklachev@gmail.com"
               required>
           </li>
-          <li class="form__item">
+          <li class="form__item form__item-contact">
             <label for="email">Телефон:*</label>
             <input type="tel" class="form__contact" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
           </li>
