@@ -176,6 +176,8 @@
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
+    width: 592px;
+    height: 511px;
     grid-row: 4/5;
     grid-column: 1/4;
     display: block;
