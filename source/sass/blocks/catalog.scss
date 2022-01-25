@@ -164,6 +164,7 @@
 
 .catalog__table {
   @include fonts(12px, 16px);
+  font-family: $font;
   width: 100%;
 }
 
@@ -195,6 +196,15 @@
 
 .catalog__button {
   margin-bottom: 33px;
+  outline: none;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    color: $button-focus;
+  }
 
   @media (min-width: $tablet-width) {
     width: 248px;
@@ -243,6 +253,7 @@
 
 .catalog__text {
   @include fonts(12px, 16px);
+  font-family: $font;
   color: $color-for-text;
   margin-top: 0;
   margin-bottom: 21px;
@@ -261,6 +272,14 @@
 
   @media (min-width: $tablet-width) {
     width: 248px;
+
+    &:hover {
+      background-color: $catalog-elements;
+    }
+
+    &:focus {
+      color: $footer-text-hover;
+    }
   }
 
   @media (min-width: $desktop-width) {

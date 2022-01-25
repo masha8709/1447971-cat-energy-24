@@ -121,6 +121,7 @@
 
 .main-catalog__text {
   @include fonts(14px, 20px);
+  font-family: $font;
   color: $color-for-text;
   margin-top: 0;
   margin-bottom: 38px;
@@ -155,9 +156,10 @@
   color: $color-for-headings;
   text-transform: uppercase;
   position: relative;
+  outline: none;
 
-  &:focus {
-    color: $color-menu-hover;
+  &:active {
+    color: $color-menu-focus;
   }
 
   &::after {
@@ -172,11 +174,19 @@
     top: 8px;
   }
 
-  &::after:hover {
-    width: 50px;
-  }
-
   @media (min-width: $tablet-width) {
     @include fonts(20px, 30px);
   }
+}
+
+.main-catalog__choose:hover::after {
+  background-image: url("../../img/svg/arrow-long.svg");
+}
+
+.main-catalog__choose:focus::after {
+  background-image: url("../../img/svg/arrow-long.svg");
+}
+
+.main-catalog__choose:active::after {
+  opacity: 0.3;
 }

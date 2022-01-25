@@ -33,8 +33,8 @@
         <li class="nav__item">
           <a href="catalog.html" class="nav__link">каталог продукции</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link nav__item--active">подбор программы</a>
+        <li class="nav__item nav__item--active">
+          <a href="#" class="nav__link">подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -66,7 +66,7 @@
           <ul class="form__list form__list-goal">
             <li class="form__item form__item-goal">
               <input type="radio" class="form__goal visually-hidden" id="weight-loss" name="goal" value="weight-loss"
-                checked>
+                tabindex="0" checked>
               <label for="weight-loss">Похудение</label>
             </li>
             <li class="form__item form__item-goal">
@@ -83,14 +83,24 @@
       <fieldset class="form__group form__group-contacts">
         <legend class="form__heading form__heading-contacts">Контактные данные (владельца кота)</legend>
         <ul class="form__list form__list-owner">
-          <li class="form__item">
+          <li class="form__item form__item-contact">
             <label for="email">E-mail:*</label>
             <input type="email" class="form__contact" name="email" id="email" placeholder="kuklachev@gmail.com"
               required>
+            <button type="button" class="form__contact-button" aria-label="Заполнить email владельца кота">
+              <svg width="19" height="14" class="form__contact-icon form__contact-email">
+                <use href="img/sprite.svg#envelope"></use>
+              </svg>
+            </button>
           </li>
-          <li class="form__item">
+          <li class="form__item form__item-contact">
             <label for="email">Телефон:*</label>
             <input type="tel" class="form__contact" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+            <button type="button" class="form__contact-button" aria-label="Заполнить телефон владельца кота">
+              <svg width="20" height="20" class="form__contact-icon form__contact-phone">
+                <use href="img/sprite.svg#phone"></use>
+              </svg>
+            </button>
           </li>
         </ul>
       </fieldset>
@@ -146,25 +156,32 @@
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <img src="img/svg/icon-vkontakte.svg" alt="Иконка вконтакте">
+          <svg width="23" height="16" class="footer__social-icon">
+            <use href="img/sprite.svg#vkontakte"></use>
+          </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <img src="img/svg/icon-instagram.svg" alt="Иконка инстаграма">
+          <svg width="16" height="16" class="footer__social-icon">
+            <use href="img/sprite.svg#instagram"></use>
+          </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <img src="img/svg/icon-facebook.svg" alt="Иконка фейсбука">
+          <svg width="22" height="22" class="footer__social-icon">
+            <use href="img/sprite.svg#facebook"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="footer__copyright-list copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">HTML
-        Academy</a>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-logo-link" target="_blank">
-        <img src="img/svg/logo-html.svg" alt="Логотип HTML Academy">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">
+        <span class="footer__copyright-link footer__copyright-text">HTML Academy</span>
+        <svg width="27" height="34" class="footer__copyright-icon">
+          <use href="img/sprite.svg#logo-html"></use>
+        </svg>
       </a>
     </div>
   </footer>

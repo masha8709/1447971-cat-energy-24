@@ -53,6 +53,7 @@
 
 .example__text {
   @include fonts(14px, 18px);
+  font-family: $font;
   color: $color-for-text;
   margin-top: 0;
   margin-bottom: 20px;
@@ -143,6 +144,7 @@
   color: $color-for-text;
   margin: 0;
   margin-left: 26px;
+  font-family: $font;
 
   @media (min-width: $tablet-width) {
     @include fonts(14px, 14px);
@@ -174,6 +176,8 @@
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
+    width: 592px;
+    height: 511px;
     grid-row: 4/5;
     grid-column: 1/4;
     display: block;
@@ -241,17 +245,43 @@
       border: 12px solid $main-color;
       background-color: $background-color;
       border-radius: 50%;
-      box-shadow: 0 2px 1px 0 #cdcdcd;
+      box-shadow: 0 0 0 1px #cdcdcd;
     }
+  }
+}
+
+.example__range-controls:hover::after {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 1px 0 2px #cdcdcd;
+  }
+}
+
+.example__range-controls:active::after {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 0 1px 1px $background-color, 0 4px 1px 0 #cdcdcd;
   }
 }
 
 .example__button {
   @include fonts(16px, 20px);
+  cursor: pointer;
   text-transform: uppercase;
   border: none;
 
   @media (min-width: $tablet-width) {
     @include fonts(20px, 30px);
+    border-bottom: 1px dotted $color-example-border;
+  }
+}
+
+.example__button:hover {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $color-example-border;
+  }
+}
+
+.example__button:active {
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
   }
 }
