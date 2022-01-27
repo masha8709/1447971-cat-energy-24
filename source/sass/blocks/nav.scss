@@ -28,9 +28,9 @@
 .nav--closed .nav__button-toggle::before {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 23px;
   left: 0;
-  width: 26px;
+  width: 24px;
   height: 2px;
   background-color: $color-for-headings;
   box-shadow: 0 8px 0 0 $color-for-headings, 0 16px 0 0 $color-for-headings;
@@ -44,9 +44,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 24px;
-    right: 20px;
-    width: 26px;
+    top: 32px;
+    right: 19px;
+    width: 25px;
     height: 2px;
     background-color: $color-for-headings;
   }
@@ -98,20 +98,21 @@
 
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 23px;
+    padding-top: 11px;
   }
 
   @media (min-width: $tablet-width) {
-    @include fonts(18px, 24px);
+    @include fonts(18px, 31px);
     font-weight: 400;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
-    @include fonts(20px, 30px);
+    @include fonts(20px, 36px);
+    margin-top: 10px;
   }
 }
 
@@ -205,7 +206,7 @@
 
 .nav__item:not(:last-child) {
   @media (min-width: $tablet-width) {
-    margin-right: 34px;
+    margin-right: 35px;
   }
 }
 

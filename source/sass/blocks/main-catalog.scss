@@ -1,12 +1,12 @@
 .main-catalog {
-  padding: 20px;
+  padding: 20px 20px 10px;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 82px 110px 0;
+    padding: 55px 110px 0;
   }
 }
 
@@ -23,20 +23,24 @@
 
 .main-catalog__item {
   background-color: $background-catalog;
-  padding: 30px 20px 18px;
+  padding: 30px 20px 22px;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 53px;
+    padding: 75px 53px 56px 53px;
   }
 
   @media (min-width: $desktop-width) {
     width: 570px;
-    padding: 41px 53px 55px;
+    padding: 76px 53px 55px;
   }
 }
 
 .main-catalog__item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
@@ -50,16 +54,34 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: 11px;
   text-transform: uppercase;
   position: relative;
 
   @media (min-width: $tablet-width) {
     @include fonts(36px, 36px);
     text-align-last: left;
+    margin-left: 0;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 125px;
+    margin-left: 161px;
+    margin-bottom: 74px;
+  }
+}
+
+.main-catalog__title-weight {
+  margin-left: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 161px;
+    margin-bottom: 74px;
   }
 }
 
@@ -71,7 +93,7 @@
   height: 53px;
   background-image: url("../../img/svg/icon-cat-black.svg");
   background-repeat: no-repeat;
-  left: 1px;
+  left: -9px;
   top: -10px;
 
   @media (min-width: $tablet-width) {
@@ -79,15 +101,17 @@
     width: 200px;
     height: 211px;
     left: auto;
-    right: 30px;
+    right: 10px;
+    top: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/svg/icon-cat-black.svg");
-    width: 52px;
-    height: 53px;
+    background-image: url("../../img/svg/cat-back-desktop.svg");
+    width: 100px;
+    height: 106px;
     right: auto;
-    left: -120px;
+    left: -161px;
+    top: -37px;
   }
 }
 
@@ -99,32 +123,34 @@
   height: 53px;
   background-image: url("../../img/svg/icon-black-panther.svg");
   background-repeat: no-repeat;
-  left: -15px;
-  top: -10px;
+  left: -47px;
+  top: -8px;
 
   @media (min-width: $tablet-width) {
     background-image: url("../../img/svg/icon-black-panther-tablet.svg");
     width: 268px;
     height: 200px;
     left: auto;
-    right: 1px;
+    right: -24px;
+    top: 18px;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/svg/icon-black-panther.svg");
-    width: 67px;
-    height: 53px;
+    background-image: url("../../img/svg/icon-black-panther-desktop.svg");
+    width: 135px;
+    height: 100px;
     right: auto;
-    left: -120px;
+    left: -182px;
+    top: -29px;
   }
 }
 
 .main-catalog__text {
-  @include fonts(14px, 20px);
+  @include fonts(14px, 18px);
   font-family: $font;
   color: $color-for-text;
   margin-top: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   width: 227px;
   position: relative;
 
@@ -135,7 +161,7 @@
     width: 240px;
     border-bottom: 1px solid $border-catalog-color;
     left: 0;
-    bottom: -20px;
+    bottom: -22px;
 
     @media (min-width: $desktop-width) {
       display: none;
@@ -144,10 +170,13 @@
 
   @media (min-width: $tablet-width) {
     @include fonts(16px, 24px);
+    width: 344px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 395px;
+    width: 471px;
+    margin-bottom: 27px;
   }
 }
 
@@ -170,8 +199,13 @@
     height: 44px;
     background-image: url("../../img/svg/arrow.svg");
     background-repeat: no-repeat;
-    right: -50px;
-    top: 8px;
+    right: -47px;
+    top: 6px;
+
+    @media (min-width: $tablet-width) {
+      right: -56px;
+      top: 8px;
+    }
   }
 
   @media (min-width: $tablet-width) {
