@@ -299,16 +299,17 @@
     &:focus {
       border: 2px solid $color-for-text;
     }
-
-    &:user-error {
-      border: 2px solid $color-error;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 20px;
     margin-left: 12px;
   }
+}
+
+.form__data--error,
+.form__contact-error {
+  border: 2px solid $color-error;
 }
 
 .form__data::placeholder,
@@ -384,8 +385,8 @@
   border: 1px solid $color-radio;
 }
 
-.form__goal + label:disabled::before {
-  border: 10px solid $color-disabled;
+.form__goal:disabled + label::before {
+  border: 1px solid $color-disabled;
 }
 
 .form__goal:checked + label::after {
@@ -406,8 +407,8 @@
   }
 }
 
-.form__goal:checked + label:disabled::after {
-  background-color: $color-disabled;
+.form__goal:checked:disabled + label::after {
+  background-color: $footer-focus-social;
 }
 
 .form__group-contacts {
@@ -638,7 +639,7 @@
 }
 
 .form__item-extra label:disabled {
-  color: $color-disabled;
+  color: $color-menu-focus;
 }
 
 .form__extra + label::before {
@@ -666,12 +667,12 @@
   border: 1px solid $color-radio;
 }
 
-.form__extra + label:disabled::before {
-  border: 10px solid $color-disabled;
+.form__extra:disabled + label::before {
+  border: 1px solid $input-disabled;
 }
 
-.form__extra:checked + label:disabled::after {
-  background-color: $color-disabled;
+.form__extra:checked:disabled + label::after {
+  opacity: 0.3;
 }
 
 .form__extra:checked + label::after {
