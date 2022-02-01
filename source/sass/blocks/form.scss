@@ -286,19 +286,20 @@
   padding-left: 14px;
   border: 1px solid $border-color-form;
   width: 100%;
+  outline: none;
+
+  &:hover {
+    border: 1px solid $border-example-color;
+  }
+
+  &:focus {
+    border: 2px solid $color-for-text;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 21px;
     padding-left: 16px;
     margin-left: 15px;
-
-    &:hover {
-      border: 1px solid $border-example-color;
-    }
-
-    &:focus {
-      border: 2px solid $color-for-text;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -453,6 +454,7 @@
   margin-bottom: 11px;
   width: 100%;
   border: 1px solid $border-color-form;
+  outline: none;
 
   &:hover {
     border: 1px solid $border-example-color;
@@ -475,6 +477,7 @@
 
 .form__contact-button {
   border: none;
+  outline: none;
   background-color: transparent;
   position: absolute;
   right: 10px;
@@ -497,6 +500,10 @@
     fill: $background-color;
   }
 
+  &:focus {
+    fill: $background-color;
+  }
+
   @media (min-width: $desktop-width) {
     right: 763px;
   }
@@ -504,6 +511,10 @@
 
 .form__contact-phone {
   &:hover {
+    stroke: $background-color;
+  }
+
+  &:focus {
     stroke: $background-color;
   }
 
@@ -538,6 +549,7 @@
 
 .form__add-comment {
   resize: none;
+  outline: none;
   padding-top: 10px;
   padding-left: 12px;
   padding-right: 7px;
@@ -710,6 +722,7 @@
 .form__send {
   font-size: 16px;
   margin-bottom: 21px;
+  outline: none;
 
   &:hover {
     background-color: $button-hover;

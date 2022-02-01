@@ -350,19 +350,21 @@
 
 .catalog__show-all {
   font-size: 16px;
+  outline: none;
   color: $color-for-text;
   background-color: $background-catalog;
 
+  &:hover {
+    background-color: $catalog-elements;
+  }
+
+  &:focus {
+    background-color: $catalog-elements;
+    color: $footer-text-hover;
+  }
+
   @media (min-width: $tablet-width) {
     width: 248px;
-
-    &:hover {
-      background-color: $catalog-elements;
-    }
-
-    &:focus {
-      color: $footer-text-hover;
-    }
   }
 
   @media (min-width: $desktop-width) {

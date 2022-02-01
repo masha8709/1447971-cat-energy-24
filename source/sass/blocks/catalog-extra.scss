@@ -273,7 +273,16 @@
 
 .catalog-extra__button {
   font-size: 16px;
+  outline: none;
   margin-bottom: 32px;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    color: $button-focus;
+  }
 
   @media (min-width: $tablet-width) {
     width: 651px;

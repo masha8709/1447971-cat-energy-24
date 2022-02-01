@@ -142,6 +142,7 @@
 
 .footer__logo-text {
   margin-right: 21px;
+  outline: none;
 }
 
 .footer__logo-text:hover {
@@ -281,6 +282,7 @@
 
 .footer__copyright-link {
   @include fonts(16px, 18px);
+  outline: none;
   font-family: $font;
   color: $color-for-text;
   margin-top: 5px;

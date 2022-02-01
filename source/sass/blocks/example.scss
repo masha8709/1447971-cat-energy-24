@@ -312,6 +312,7 @@
 
 .example__button {
   @include fonts(16px, 20px);
+  outline: none;
   cursor: pointer;
   text-transform: uppercase;
   border: none;
@@ -326,6 +327,10 @@
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $color-example-border;
   }
+}
+
+.example__button:focus {
+  border-bottom: 1px solid $color-example-border;
 }
 
 .example__button:active {
