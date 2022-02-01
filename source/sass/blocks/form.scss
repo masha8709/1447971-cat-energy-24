@@ -12,7 +12,7 @@
     padding-top: 43px;
     padding-right: 110px;
     padding-left: 110px;
-    padding-bottom: 64px;
+    padding-bottom: 54px;
   }
 }
 
@@ -697,7 +697,6 @@
     padding-left: 41px;
     display: flex;
     column-gap: 61px;
-    align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
@@ -737,5 +736,10 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     margin-left: 2px;
+    margin-top: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 16px;
   }
 }

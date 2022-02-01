@@ -50,13 +50,6 @@
   }
 }
 
-.footer__contact-form {
-  @media (min-width: $desktop-width) {
-    margin-top: 94px;
-    padding-top: 53px;
-  }
-}
-
 .footer__invite {
   @include fonts(16px, 20px);
   color: $color-for-footer;
@@ -105,7 +98,7 @@
 .footer__map {
   grid-row: 2/3;
   grid-column: 1/-1;
-  margin-bottom: 36px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -166,7 +159,7 @@
 .footer__social-list {
   @include reset-list;
   margin-top: 20px;
-  margin-bottom: 9px;
+  margin-bottom: 11px;
   margin-right: auto;
   margin-left: auto;
   grid-row: 4/5;
@@ -210,7 +203,7 @@
   @media (min-width: $tablet-width) {
     grid-row: 3/4;
     grid-column: 2/3;
-    margin-top: 58px;
+    margin-top: 75px;
     margin-bottom: 55px;
   }
 

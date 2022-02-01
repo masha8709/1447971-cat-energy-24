@@ -1,5 +1,5 @@
 .catalog {
-  padding: 27px 20px 25px;
+  padding: 28px 20px 25px;
 
   @media (min-width: $tablet-width) {
     padding: 27px 30px 25px;
@@ -109,8 +109,15 @@
   }
 }
 
+.catalog__item:nth-child(2) {
+  margin-bottom: -4px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+}
+
 .catalog__item:last-child {
-  //grid-template-columns: auto;
   display: flex;
   flex-direction: column;
 
@@ -141,7 +148,7 @@
 }
 
 .catalog__img-food {
-  margin: 11px auto auto;
+  margin: 28px auto auto;
 
   @media (min-width: $tablet-width) {
     margin-top: 18px;
@@ -166,6 +173,10 @@
     margin-top: -17px;
     margin-bottom: 17px;
   }
+}
+
+.catalog__item:first-child .catalog__img-food {
+  margin-top: 10px;
 }
 
 .catalog__item-wrp {
@@ -274,7 +285,7 @@
   @include fonts(16px, 20px);
   color: $color-for-footer;
   text-transform: uppercase;
-  margin-top: 72px;
+  margin-top: 76px;
   margin-bottom: 8px;
   text-align: center;
   position: relative;
