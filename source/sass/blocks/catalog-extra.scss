@@ -11,9 +11,9 @@
   @media (min-width: $desktop-width) {
     padding-right: 110px;
     padding-left: 110px;
-    padding-bottom: 74px;
+    padding-bottom: 56px;
     display: grid;
-    grid-template-rows: 117px 288px;
+    grid-template-rows: 117px auto;
     grid-template-columns: 1fr 245px;
   }
 }
@@ -366,7 +366,7 @@
 
   @media (min-width: $desktop-width) {
     width: 167px;
-    margin-bottom: 46px;
+    margin-bottom: 63px;
     margin-right: auto;
     text-align: center;
   }
