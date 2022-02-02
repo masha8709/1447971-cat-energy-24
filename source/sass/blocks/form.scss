@@ -293,7 +293,9 @@
   }
 
   &:focus {
-    border: 2px solid $color-for-text;
+    outline-color: $color-for-text;
+    outline-width: 2px;
+    outline-style: solid;
   }
 
   @media (min-width: $tablet-width) {
@@ -461,11 +463,9 @@
   }
 
   &:focus {
-    border: 2px solid $color-for-text;
-  }
-
-  &:user-error {
-    border: 2px solid $color-error;
+    outline-color: $color-for-text;
+    outline-width: 2px;
+    outline-style: solid;
   }
 
   @media (min-width: $tablet-width) {
@@ -484,7 +484,6 @@
 }
 
 .form__contact-icon {
-  fill: $main-color;
   position: relative;
   right: 18px;
   top: 13px;
@@ -496,12 +495,15 @@
 }
 
 .form__contact-email {
+  stroke: currentColor;
+  color: $color-for-headings;
+
   &:hover {
-    fill: $background-color;
+    color: $background-color;
   }
 
   &:focus {
-    fill: $background-color;
+    color: $background-color;
   }
 
   @media (min-width: $desktop-width) {
@@ -510,12 +512,15 @@
 }
 
 .form__contact-phone {
+  fill: currentColor;
+  color: $color-for-headings;
+
   &:hover {
-    stroke: $background-color;
+    color: $background-color;
   }
 
   &:focus {
-    stroke: $background-color;
+    color: $background-color;
   }
 
   @media (min-width: $desktop-width) {

@@ -220,10 +220,10 @@
   outline: none;
 }
 
-.footer__social-icon:hover,
-.footer__social-link:focus .footer__social-icon {
-  stroke: $background-color;
-}
+// .footer__social-icon:hover,
+// .footer__social-link:focus .footer__social-icon {
+//   stroke: $background-color;
+// }
 
 .footer__social-link:active .footer__social-icon {
   stroke: rgba(104, 183, 56, 0.3);
@@ -232,6 +232,8 @@
 .footer__social-facebook {
   width: 22px;
   height: 22px;
+  stroke: currentColor;
+  color: $color-for-headings;
 
   @media (min-width: $tablet-width) {
     width: 28px;
@@ -239,9 +241,23 @@
   }
 }
 
+.footer__social-facebook:hover {
+  color: $background-color;
+}
+
+.footer__social-facebook:focus {
+  color: $background-color;
+}
+
+.footer__social-facebook:active {
+  color: $footer-focus-social;
+}
+
 .footer__social-insta {
   width: 16px;
   height: 16px;
+  fill: currentColor;
+  color: $color-for-headings;
 
   @media (min-width: $tablet-width) {
     width: 23px;
@@ -249,14 +265,40 @@
   }
 }
 
+.footer__social-insta:hover {
+  color: $background-color;
+}
+
+.footer__social-insta:focus {
+  color: $background-color;
+}
+
+.footer__social-insta:active {
+  color: $footer-focus-social;
+}
+
 .footer__social-vk {
   width: 23px;
   height: 16px;
+  fill: currentColor;
+  color: $color-for-headings;
 
   @media (min-width: $tablet-width) {
     width: 30px;
     height: 22px;
   }
+}
+
+.footer__social-vk:hover {
+  color: $background-color;
+}
+
+.footer__social-vk:focus {
+  color: $background-color;
+}
+
+.footer__social-vk:active {
+  color: $footer-focus-social;
 }
 
 .footer__copyright-list {
@@ -314,9 +356,9 @@
 }
 
 .footer__copyright-icon:hover {
-  stroke: $background-color;
+  color: $background-color;
 }
 
 .footer__copyright-link:active .footer__copyright-icon {
-  stroke: $footer-focus-social;
+  color: $footer-focus-social;
 }
