@@ -3,14 +3,14 @@
   background-color: $main-color;
 
   @media (min-width: $tablet-width) {
-    padding: 42px 30px 35px;
+    padding: 26px 30px 35px 30px;
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    padding-top: 53px;
+    padding-top: 58px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -24,7 +24,7 @@
 }
 
 .header__logo {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     grid-row: 1/2;

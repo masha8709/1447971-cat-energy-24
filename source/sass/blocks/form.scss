@@ -1,14 +1,18 @@
 .form {
-  padding: 27px 20px 32px;
+  padding: 27px 20px 28px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 29px;
     padding-right: 30px;
     padding-left: 30px;
+    padding-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 43px;
     padding-right: 110px;
     padding-left: 110px;
+    padding-bottom: 54px;
   }
 }
 
@@ -16,7 +20,7 @@
   @include fonts(36px, 36px);
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
     @include fonts(60px, 60px);
@@ -26,6 +30,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
+    margin-bottom: 56px;
   }
 }
 
@@ -33,7 +38,8 @@
   @include fonts(14px, 18px);
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
+  width: 227px;
 
   @media (min-width: $tablet-width) {
     @include fonts(20px, 30px);
@@ -160,15 +166,19 @@
 }
 
 .form__group-data {
-  padding-bottom: 36px;
+  padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 72px;
+    padding-bottom: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 48px;
   }
 }
 
 .form__group-goal {
-  padding-bottom: 32px;
+  padding-bottom: 26px;
   position: relative;
 
   &::before {
@@ -178,7 +188,7 @@
     width: 320px;
     min-height: 158px;
     border-top: 1px solid $border-catalog-color;
-    top: -23px;
+    top: -29px;
     left: -23px;
   }
 
@@ -189,15 +199,21 @@
     width: 320px;
     min-height: 158px;
     border-top: 1px solid $border-catalog-color;
-    bottom: -123px;
+    bottom: -130px;
     left: -23px;
   }
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 81px;
+
     &::before,
     &::after {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 75px;
   }
 }
 
@@ -226,8 +242,8 @@
       border: 1px solid $border-color-form;
       width: 630px;
       height: 196px;
-      top: -17px;
-      left: 35px;
+      top: -30px;
+      left: 39px;
     }
   }
 
@@ -236,6 +252,7 @@
 
     &::before {
       top: 0;
+      width: 569px;
     }
   }
 }
@@ -257,34 +274,43 @@
   align-items: baseline;
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 94%;
   }
 }
 
 .form__data {
-  margin-left: 13px;
+  margin-left: 12px;
   margin-bottom: 13px;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 14px;
   border: 1px solid $border-color-form;
   width: 100%;
+  outline: none;
+
+  &:hover {
+    border: 1px solid $border-example-color;
+  }
+
+  &:focus {
+    border: 2px solid $color-for-text;
+  }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-
-    &:hover {
-      border: 1px solid $border-example-color;
-    }
-
-    &:focus {
-      border: 2px solid $color-for-text;
-    }
-
-    &:user-error {
-      border: 2px solid $color-error;
-    }
+    margin-bottom: 21px;
+    padding-left: 16px;
+    margin-left: 15px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 20px;
+    margin-left: 12px;
+  }
+}
+
+.form__data--error,
+.form__contact-error {
+  border: 2px solid $color-error;
 }
 
 .form__data::placeholder,
@@ -293,10 +319,18 @@
   @include fonts(16px, 18px);
   color: $color-for-text;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .form__item-data:nth-child(2) label {
   width: 88px;
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+  }
 }
 
 .form__item-data:nth-child(3) label {
@@ -308,12 +342,12 @@
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 87px;
-    margin-bottom: 35px;
+    padding-left: 86px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
 }
 
@@ -340,7 +374,7 @@
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
-    left: -64px;
+    left: -60px;
   }
 }
 
@@ -352,8 +386,8 @@
   border: 1px solid $color-radio;
 }
 
-.form__goal + label:disabled::before {
-  border: 10px solid $color-disabled;
+.form__goal:disabled + label::before {
+  border: 1px solid $color-disabled;
 }
 
 .form__goal:checked + label::after {
@@ -370,17 +404,17 @@
     width: 18px;
     height: 18px;
     top: 5px;
-    left: -53px;
+    left: -50px;
   }
 }
 
-.form__goal:checked + label:disabled::after {
-  background-color: $color-disabled;
+.form__goal:checked:disabled + label::after {
+  background-color: $footer-focus-social;
 }
 
 .form__group-contacts {
   @media (min-width: $tablet-width) {
-    padding-left: 41px;
+    padding-left: 38px;
     padding-right: 35px;
   }
 
@@ -392,21 +426,23 @@
 
 .form__item-contact {
   @media (min-width: $desktop-width) {
-    width: 597px;
+    width: 568px;
   }
 }
 
 .form__list-owner {
-  padding-bottom: 10px;
+  padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 65px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    padding-bottom: 48px;
   }
 }
 
@@ -414,10 +450,11 @@
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 16px;
-  margin-left: 13px;
-  margin-bottom: 14px;
+  margin-left: 5px;
+  margin-bottom: 11px;
   width: 100%;
   border: 1px solid $border-color-form;
+  outline: none;
 
   &:hover {
     border: 1px solid $border-example-color;
@@ -430,10 +467,17 @@
   &:user-error {
     border: 2px solid $color-error;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 19px;
+    margin-left: 15px;
+    margin-bottom: 21px;
+  }
 }
 
 .form__contact-button {
   border: none;
+  outline: none;
   background-color: transparent;
   position: absolute;
   right: 10px;
@@ -442,12 +486,12 @@
 .form__contact-icon {
   fill: $main-color;
   position: relative;
-  right: 16px;
+  right: 18px;
   top: 13px;
 
   @media (min-width: $tablet-width) {
-    right: 72px;
-    top: 12px;
+    right: 68px;
+    top: 13px;
   }
 }
 
@@ -456,8 +500,12 @@
     fill: $background-color;
   }
 
+  &:focus {
+    fill: $background-color;
+  }
+
   @media (min-width: $desktop-width) {
-    right: 733px;
+    right: 763px;
   }
 }
 
@@ -466,8 +514,12 @@
     stroke: $background-color;
   }
 
+  &:focus {
+    stroke: $background-color;
+  }
+
   @media (min-width: $desktop-width) {
-    right: 115px;
+    right: 112px;
   }
 }
 
@@ -483,49 +535,64 @@
   padding-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 41px;
+    padding-left: 38px;
     padding-right: 37px;
+    padding-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 64px;
   }
 }
 
 .form__add-comment {
   resize: none;
+  outline: none;
   padding-top: 10px;
-  padding-left: 15px;
+  padding-left: 12px;
+  padding-right: 7px;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    padding-top: 16px;
+    padding-left: 18px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 16px;
   }
 }
 
 .form__group-extra {
-  padding-bottom: 14px;
+  padding-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     padding-left: 41px;
     padding-right: 37px;
-    padding-bottom: 42px;
+    padding-bottom: 17px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 25px;
   }
 }
 
 .form__heading-extra {
+  margin-bottom: 38px;
+
   &::after {
     width: 136px;
     right: -157px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 63px;
 
     &::before {
       width: 30px;
@@ -562,17 +629,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 1197px;
   }
 }
 
 .form__item-extra {
   padding-left: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     width: 221px;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
+    padding-left: 56px;
   }
 }
 
@@ -583,21 +651,23 @@
 }
 
 .form__item-extra label:disabled {
-  color: $color-disabled;
+  color: $color-menu-focus;
 }
 
 .form__extra + label::before {
   content: "";
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 29px;
+  height: 30px;
   border: 1px solid $border-example-color;
-  top: -3px;
+  top: -5px;
   left: -46px;
 
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
+    top: -6px;
+    left: -60px;
   }
 }
 
@@ -609,12 +679,12 @@
   border: 1px solid $color-radio;
 }
 
-.form__extra + label:disabled::before {
-  border: 10px solid $color-disabled;
+.form__extra:disabled + label::before {
+  border: 1px solid $input-disabled;
 }
 
-.form__extra:checked + label:disabled::after {
-  background-color: $color-disabled;
+.form__extra:checked:disabled + label::after {
+  opacity: 0.3;
 }
 
 .form__extra:checked + label::after {
@@ -630,7 +700,8 @@
     width: 26px;
     height: 26px;
     background-image: url("../../img/svg/tick-tablet.svg");
-    left: -39px;
+    left: -53px;
+    top: 0;
   }
 }
 
@@ -639,7 +710,6 @@
     padding-left: 41px;
     display: flex;
     column-gap: 61px;
-    align-items: baseline;
   }
 
   @media (min-width: $desktop-width) {
@@ -650,7 +720,9 @@
 }
 
 .form__send {
+  font-size: 16px;
   margin-bottom: 21px;
+  outline: none;
 
   &:hover {
     background-color: $button-hover;
@@ -658,6 +730,10 @@
 
   &:focus {
     color: $button-focus;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fonts(20px, 29px);
   }
 
   @media (min-width: $desktop-width) {
@@ -670,4 +746,14 @@
   font-family: $font;
   display: block;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    margin-left: 2px;
+    margin-top: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 16px;
+  }
 }

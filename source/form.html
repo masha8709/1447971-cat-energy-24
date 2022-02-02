@@ -9,8 +9,7 @@
   <link rel="icon" href="../favicon.ico">
   <link rel="icon" href="./img/favicons/152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/180.png">
-  <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="body">
@@ -20,7 +19,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="./img/svg/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/svg/logo-tablet.svg">
-          <img src="img/svg/logo-mobile1.svg" width="191" height="38" alt="Логотип компании Cat Energy">
+          <img src="img/svg/logo-mobile1.svg" alt="Логотип компании Cat Energy">
         </picture>
       </a>
     </div>
@@ -138,8 +137,8 @@
   </main>
   <footer class="footer container">
     <div class="footer__contact">
-      <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
-      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <p class="footer__invite">Приглашаем <br>к сотрудничеству дилеров!</p>
+      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 <span class="footer__city">Санкт-Петербург</span></address>
     </div>
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
@@ -150,27 +149,27 @@
     </section>
     <div class="footer__logo-wrp">
       <a href="#" class="footer__logo-text logo">
-        <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+        <img width="124" height="28" src="./img/svg/footer-logo.svg" alt="Cat Energy">
       </a>
     </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <svg width="23" height="16" class="footer__social-icon">
+          <svg class="footer__social-icon footer__social-vk">
             <use href="img/sprite.svg#vkontakte"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <svg width="16" height="16" class="footer__social-icon">
+          <svg class="footer__social-icon footer__social-insta">
             <use href="img/sprite.svg#instagram"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <svg width="22" height="22" class="footer__social-icon">
+          <svg class="footer__social-icon footer__social-facebook">
             <use href="img/sprite.svg#facebook"></use>
           </svg>
         </a>

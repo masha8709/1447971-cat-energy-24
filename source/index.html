@@ -8,8 +8,7 @@
   <link rel="icon" href="../favicon.ico">
   <link rel="icon" href="./img/favicons/152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/180.png">
-  <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="body">
@@ -19,7 +18,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="./img/svg/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/svg/logo-tablet.svg">
-          <img src="img/svg/logo-mobile1.svg" width="191" height="38" alt="Логотип компании Cat Energy">
+          <img src="img/svg/logo-mobile1.svg" alt="Логотип компании Cat Energy">
         </picture>
       </a>
     </div>
@@ -65,7 +64,7 @@
           <a href="#" class="main-catalog__choose">каталог slim</a>
         </li>
         <li class="main-catalog__item main-catalog__pro">
-          <h3 class="main-catalog__title">Набор массы</h3>
+          <h3 class="main-catalog__title main-catalog__title-weight">Набор массы</h3>
           <p class="main-catalog__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет
             вашему коту нарастить необходимые мышцы!
@@ -95,15 +94,15 @@
       </p>
       <div class="example__lists">
         <dl class="example__list">
-          <dt class="example__number example__number-weight">5 кг</dt>
+          <dt class="example__number example__number-weight">5 <span class="example__number-txt">кг</span></dt>
           <dd class="example__description">снижение веса</dd>
         </dl>
         <dl class="example__list">
-          <dt class="example__number">60 дней</dt>
+          <dt class="example__number">60 <span class="example__number-txt">дней</span></dt>
           <dd class="example__description">затрачено времени</dd>
         </dl>
       </div>
-      <p class="example__value">Затраты на питание: 15 000 руб. </p>
+      <p class="example__value">Затраты на питание: <span class="example__value-number">15 000 руб.</span></p>
       <picture class="example__img">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="./img/main/cat-split-tablet.webp 1x, ./img/main/cat-split-tablet@2x.webp 2x">
@@ -111,22 +110,22 @@
           srcset="img/main/cat-before-mobile.webp 1x, ./img/main/cat-before-mobile@2x.webp 2x">
 
         <source media="(min-width: 768px)" srcset="./img/main/cat-split-tablet.png 1x,
-        ./img/main/cat-split-tablet@2x.png">
-        <img class="example__img" width="280" height="232" src="img/main/cat-before-mobile.png"
+        ./img/main/cat-split-tablet@2x.png 2x">
+        <img class="example__img" src="img/main/cat-before-mobile.png"
           srcset="./img/main/cat-before-mobile@2x.png 2x" alt="До диеты кот толстенький">
       </picture>
       <div class="example__range">
         <button type="button" class="example__button example__button-past">Было</button>
-        <div class="example__range-controls" tabindex="0">
+        <div class="example__range-controls">
         </div>
         <button type="button" class="example__button example__button-present">Стало</button>
       </div>
     </section>
   </main>
   <footer class="footer container">
-    <div class="footer__contact">
-      <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
-      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+    <div class="footer__contact footer__contact-index">
+      <p class="footer__invite">Приглашаем <br>к сотрудничеству дилеров!</p>
+      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 <span class="footer__city">Санкт-Петербург</span></address>
     </div>
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
@@ -137,27 +136,27 @@
     </section>
     <div class="footer__logo-wrp">
       <a href="#" class="footer__logo-text logo">
-        <img src="img/svg/logo-txt.svg" alt="Cat Energy">
+        <img width="124" height="28" src="./img/svg/footer-logo.svg" alt="Cat Energy">
       </a>
     </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <svg width="23" height="16" class="footer__social-icon">
+          <svg class="footer__social-icon footer__social-vk">
             <use href="img/sprite.svg#vkontakte"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <svg width="16" height="16" class="footer__social-icon">
+          <svg class="footer__social-icon footer__social-insta">
             <use href="img/sprite.svg#instagram"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a href="#" target="_blank" class="footer__social-link">
-          <svg width="22" height="22" class="footer__social-icon">
+          <svg class="footer__social-icon footer__social-facebook">
             <use href="img/sprite.svg#facebook"></use>
           </svg>
         </a>
