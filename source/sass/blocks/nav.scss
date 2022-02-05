@@ -67,6 +67,10 @@
   display: none;
 }
 
+.nav--nojs .nav__list {
+  display: block;
+}
+
 @media (max-width: $mobile-width-only) {
   .nav--closed .nav__item {
     display: none;
@@ -104,7 +108,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include fonts(18px, 31px);
+    @include fonts(18px, 28px);
     font-weight: 400;
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +117,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include fonts(20px, 36px);
+    @include fonts(20px, 30px);
     margin-top: 10px;
   }
 }

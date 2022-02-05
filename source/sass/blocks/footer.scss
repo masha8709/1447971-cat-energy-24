@@ -99,13 +99,18 @@
   grid-row: 2/3;
   grid-column: 1/-1;
   margin-bottom: 37px;
+  background-image: url("../../img/main/location-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    background-image: url("../../img/main/location-tablet.jpg");
   }
 
   @media (min-width: $desktop-width) {
     grid-row: 1/2;
+    background-image: url("../../img/main/location-desktop.jpg");
   }
 }
 
@@ -142,7 +147,6 @@
 
 .footer__logo-text {
   margin-right: 21px;
-  outline: none;
 }
 
 .footer__logo-text:hover {
@@ -150,6 +154,7 @@
 }
 
 .footer__logo-text:focus {
+  outline: none;
   opacity: 0.8;
 }
 
@@ -221,15 +226,6 @@
   outline: none;
 }
 
-// .footer__social-icon:hover,
-// .footer__social-link:focus .footer__social-icon {
-//   stroke: $background-color;
-// }
-
-.footer__social-link:active .footer__social-icon {
-  stroke: rgba(104, 183, 56, 0.3);
-}
-
 .footer__social-facebook {
   width: 22px;
   height: 22px;
@@ -244,14 +240,6 @@
 
 .footer__social-facebook:hover {
   color: $background-color;
-}
-
-.footer__social-facebook:focus {
-  color: $background-color;
-}
-
-.footer__social-facebook:active {
-  color: $footer-focus-social;
 }
 
 .footer__social-insta {
@@ -270,14 +258,6 @@
   color: $background-color;
 }
 
-.footer__social-insta:focus {
-  color: $background-color;
-}
-
-.footer__social-insta:active {
-  color: $footer-focus-social;
-}
-
 .footer__social-vk {
   width: 23px;
   height: 16px;
@@ -294,11 +274,11 @@
   color: $background-color;
 }
 
-.footer__social-vk:focus {
+.footer__social-link:focus .footer__social-icon {
   color: $background-color;
 }
 
-.footer__social-vk:active {
+.footer__social-link:active .footer__social-icon {
   color: $footer-focus-social;
 }
 
@@ -357,6 +337,10 @@
 }
 
 .footer__copyright-icon:hover {
+  color: $background-color;
+}
+
+.footer__copyright-link:focus .footer__copyright-icon {
   color: $background-color;
 }
 

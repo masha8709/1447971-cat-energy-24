@@ -23,7 +23,7 @@
         </picture>
       </a>
     </div>
-    <nav class="nav nav--closed nav--nojs">
+    <nav class="nav nav--opened nav--nojs">
       <button class="nav__button-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="nav__list">
         <li class="nav__item">
@@ -39,7 +39,7 @@
     </nav>
   </header>
   <main class="main">
-    <form class="form">
+    <form class="form" method="get" action="https://echo.htmlacademy.ru" target="_blank">
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <div class="form__data-wrapper">
@@ -65,7 +65,7 @@
           <ul class="form__list form__list-goal">
             <li class="form__item form__item-goal">
               <input type="radio" class="form__goal visually-hidden" id="weight-loss" name="goal" value="weight-loss"
-                tabindex="0" checked>
+                checked>
               <label for="weight-loss">Похудение</label>
             </li>
             <li class="form__item form__item-goal">
@@ -86,20 +86,20 @@
             <label for="email">E-mail:*</label>
             <input type="email" class="form__contact" name="email" id="email" placeholder="kuklachev@gmail.com"
               required>
-            <button type="button" class="form__contact-button" aria-label="Заполнить email владельца кота">
+            <span class="form__icon-wrp" aria-label="Заполнить email владельца кота">
               <svg width="19" height="14" class="form__contact-icon form__contact-email">
                 <use href="img/sprite.svg#envelope"></use>
               </svg>
-            </button>
+            </span>
           </li>
           <li class="form__item form__item-contact">
             <label for="email">Телефон:*</label>
             <input type="tel" class="form__contact" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
-            <button type="button" class="form__contact-button" aria-label="Заполнить телефон владельца кота">
+            <span class="form__icon-wrp" aria-label="Заполнить телефон владельца кота">
               <svg width="20" height="20" class="form__contact-icon form__contact-phone">
                 <use href="img/sprite.svg#phone"></use>
               </svg>
-            </button>
+            </span>
           </li>
         </ul>
       </fieldset>
@@ -138,7 +138,8 @@
   <footer class="footer container">
     <div class="footer__contact">
       <p class="footer__invite">Приглашаем <br>к сотрудничеству дилеров!</p>
-      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 <span class="footer__city">Санкт-Петербург</span></address>
+      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 <span class="footer__city">Санкт-Петербург</span>
+      </address>
     </div>
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
@@ -149,36 +150,37 @@
     </section>
     <div class="footer__logo-wrp">
       <a href="#" class="footer__logo-text logo">
-        <img width="124" height="28" src="./img/svg/footer-logo.svg" alt="Cat Energy">
+        <img width="124" height="28" src="./img/svg/footer-logo.svg" alt="логотип компании Cat Energy">
       </a>
     </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
-        <a href="#" target="_blank" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-vk">
+        <a href="#" target="_blank" class="footer__social-link" aria-label="Вконтакте">
+          <svg class="footer__social-icon footer__social-vk" aria-hidden="true">
             <use href="img/sprite.svg#vkontakte"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
-        <a href="#" target="_blank" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-insta">
+        <a href="#" target="_blank" class="footer__social-link" aria-label="Инстаграм">
+          <svg class="footer__social-icon footer__social-insta" aria-hidden="true">
             <use href="img/sprite.svg#instagram"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
-        <a href="#" target="_blank" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-facebook">
+        <a href="#" target="_blank" class="footer__social-link" aria-label="Фейсбук">
+          <svg class="footer__social-icon footer__social-facebook" aria-hidden="true">
             <use href="img/sprite.svg#facebook"></use>
           </svg>
         </a>
       </li>
     </ul>
     <div class="footer__copyright-list copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank"
+        aria-label="логотип компании HTMLAcademy">
         <span class="footer__copyright-link footer__copyright-text">HTML Academy</span>
-        <svg width="27" height="34" class="footer__copyright-icon">
+        <svg width="27" height="34" class="footer__copyright-icon" aria-hidden="true">
           <use href="img/sprite.svg#logo-html"></use>
         </svg>
       </a>

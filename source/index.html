@@ -23,7 +23,7 @@
       </a>
     </div>
 
-    <nav class="nav nav--closed nav--nojs">
+    <nav class="nav nav--opened nav--nojs">
       <button class="nav__button-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="nav__list">
         <li class="nav__item nav__item--active nav__item-index-active">
@@ -106,13 +106,12 @@
       <picture class="example__img">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="./img/main/cat-split-tablet.webp 1x, ./img/main/cat-split-tablet@2x.webp 2x">
-        <source type="image/webp"
-          srcset="img/main/cat-before-mobile.webp 1x, ./img/main/cat-before-mobile@2x.webp 2x">
+        <source type="image/webp" srcset="img/main/cat-before-mobile.webp 1x, ./img/main/cat-before-mobile@2x.webp 2x">
 
         <source media="(min-width: 768px)" srcset="./img/main/cat-split-tablet.png 1x,
         ./img/main/cat-split-tablet@2x.png 2x">
-        <img class="example__img" src="img/main/cat-before-mobile.png"
-          srcset="./img/main/cat-before-mobile@2x.png 2x" alt="До диеты кот толстенький">
+        <img class="example__img" src="img/main/cat-before-mobile.png" srcset="./img/main/cat-before-mobile@2x.png 2x"
+          alt="До диеты кот толстенький">
       </picture>
       <div class="example__range">
         <button type="button" class="example__button example__button-past">Было</button>
@@ -125,7 +124,8 @@
   <footer class="footer container">
     <div class="footer__contact footer__contact-index">
       <p class="footer__invite">Приглашаем <br>к сотрудничеству дилеров!</p>
-      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 <span class="footer__city">Санкт-Петербург</span></address>
+      <address class="footer__address">ул. Большая Конюшенная, д. 19/8 <span class="footer__city">Санкт-Петербург</span>
+      </address>
     </div>
     <section class="footer__map">
       <h2 class="visually-hidden">Карта</h2>
@@ -136,36 +136,37 @@
     </section>
     <div class="footer__logo-wrp">
       <a href="#" class="footer__logo-text logo">
-        <img width="124" height="28" src="./img/svg/footer-logo.svg" alt="Cat Energy">
+        <img width="124" height="28" src="./img/svg/footer-logo.svg" alt="логотип компании Cat Energy">
       </a>
     </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
-        <a href="#" target="_blank" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-vk">
+        <a href="#" target="_blank" class="footer__social-link" aria-label="Вконтакте">
+          <svg class="footer__social-icon footer__social-vk" aria-hidden="true">
             <use href="img/sprite.svg#vkontakte"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
-        <a href="#" target="_blank" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-insta">
+        <a href="#" target="_blank" class="footer__social-link" aria-label="Инстаграм">
+          <svg class="footer__social-icon footer__social-insta" aria-hidden="true">
             <use href="img/sprite.svg#instagram"></use>
           </svg>
         </a>
       </li>
       <li class="footer__social-item">
-        <a href="#" target="_blank" class="footer__social-link">
-          <svg class="footer__social-icon footer__social-facebook">
+        <a href="#" target="_blank" class="footer__social-link" aria-label="Фейсбук">
+          <svg class="footer__social-icon footer__social-facebook" aria-hidden="true">
             <use href="img/sprite.svg#facebook"></use>
           </svg>
         </a>
       </li>
     </ul>
     <div class="footer__copyright-list copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" target="_blank"
+        aria-label="логотип компании HTMLAcademy">
         <span class="footer__copyright-link footer__copyright-text">HTML Academy</span>
-        <svg width="27" height="34" class="footer__copyright-icon">
+        <svg width="27" height="34" class="footer__copyright-icon" aria-hidden="true">
           <use href="img/sprite.svg#logo-html"></use>
         </svg>
       </a>

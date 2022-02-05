@@ -311,9 +311,8 @@
   }
 }
 
-.form__data--error,
-.form__contact-error {
-  border: 2px solid $color-error;
+.form__data--error {
+  outline: 2px solid $color-error;
 }
 
 .form__data::placeholder,
@@ -385,7 +384,7 @@
   border: 1px solid $color-radio;
 }
 
-.form__goal + label:focus::before {
+.form__goal:focus + label::before {
   border: 1px solid $color-radio;
 }
 
@@ -407,7 +406,7 @@
     width: 18px;
     height: 18px;
     top: 5px;
-    left: -50px;
+    left: -49px;
   }
 }
 
@@ -476,12 +475,13 @@
   }
 }
 
-.form__contact-button {
-  border: none;
-  outline: none;
-  background-color: transparent;
+.form__contact--error {
+  outline: 2px solid $color-error;
+}
+
+.form__icon-wrp {
   position: absolute;
-  right: 10px;
+  right: 14px;
 }
 
 .form__contact-icon {
@@ -503,10 +503,6 @@
     color: $background-color;
   }
 
-  &:focus {
-    color: $background-color;
-  }
-
   @media (min-width: $desktop-width) {
     right: 763px;
   }
@@ -520,13 +516,13 @@
     color: $background-color;
   }
 
-  &:focus {
-    color: $background-color;
-  }
-
   @media (min-width: $desktop-width) {
     right: 112px;
   }
+}
+
+.form__icon-wrp:focus .form__contact-icon {
+  color: $background-color;
 }
 
 .form__item-contact:first-child label {
@@ -681,7 +677,7 @@
   border: 1px solid $color-radio;
 }
 
-.form__extra + label:focus::before {
+.form__extra:focus + label::before {
   border: 1px solid $color-radio;
 }
 
